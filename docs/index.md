@@ -1,6 +1,7 @@
 # Welcome to HAMK
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+For full documentation visit <a href="https://hamk-business-information-technology.github.io/os/" target="_blank">HAMK BYOD guide</a>.
+
 
 ## Commands
 
