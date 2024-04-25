@@ -1,7 +1,8 @@
 # Welcome to HAMK
 
-For full documentation visit <a href="https://hamk-business-information-technology.github.io/os/" target="_blank">HAMK BYOD guide</a>.
+Bring Your Own Device to study: this is the <a href="https://hamk-business-information-technology.github.io/os/" target="_blank">HAMK BYOD guide</a> to get your computer ready.
 
+This page is built following the instruction on <a href="https://www.youtube.com/watch?v=Q-YA_dA8C20" target="_blank">YouTube</a>
 
 ## Commands
 
