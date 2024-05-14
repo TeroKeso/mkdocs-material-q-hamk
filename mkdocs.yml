@@ -30,9 +30,9 @@ theme:
         accent: pink
 extra:
   annotate:
-    json: [.s2]
-    javascript: [.s2]
-    java: [.s2]
+  #  json: [.s2]
+  #  javascript: [.s2]
+  #  java: [.s2]
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/luonghuyquang

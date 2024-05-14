@@ -57,6 +57,7 @@ put - scheme: slate as the 1st scheme in palette
  (even done, need checking and improving if needed)  
 ... Suboptimal: php (need the leading '<?php')  
 ... Suboptimal: bash, sh  
+<a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>
 
 ### 4.6 Code annotation
 <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations'>mkdocs-material/reference/code-blocks/#code-annotations</a>

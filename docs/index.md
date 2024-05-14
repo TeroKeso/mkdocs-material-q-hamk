@@ -39,9 +39,8 @@ The mock shebang will be treated like text here: ` #!js var test = 0; `.
 
 ```
 ### 1.3 Code highlighting
-Highlight the bash and php codes !!!  
-bash highlighted but not as much as required  
-start at this <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussion 6504</a>    
+Highlight the codes, currently bash highlighted but suboptimal  
+Start at this <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussion 6504</a> on bash/sh/shell codeblock syntax highlight   
 
 #### bash (suboptimal)
 ```bash linenums="1"
@@ -101,20 +100,21 @@ document.getElementById("demo").innerHTML = 5 + 6;
 // this is java
 public class Main {
   public static void main(String[] args) {
-    System.out.println("Hello World"); /* (1) */
+    System.out.println("Hello World");
   }
 }
 ```
-1. :testing the annotation
 
 #### js ✓
 ```js linenums="1"
 // this is js
-document.getElementById("demo").innerHTML = "Hello JavaScript"; // (1)
+document.getElementById("demo").innerHTML = "Hello JavaScript";
 ```
-1. :testing the annotation
+
 
 #### php (needs the opening PHP tag)
+Solution: <a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>  
+
 ```php linenums="1"
 // this is php
 echo "Hello, world!";
@@ -184,9 +184,9 @@ echo -e "\n you path has the following files and folders: "
 ls $the_path
 ```
 
-#### yml
-```yml
-# this is yml
+#### yaml ✓
+```yaml
+# this is yaml
   language: en
   palette: 
     - scheme: slate # put slate first to make dark mode the default one
@@ -203,6 +203,24 @@ ls $the_path
 ```
 
 ### 1.4 Code annotation
+#### java
+
+```java title="helloWorld.jav" linenums="1"
+// this is java
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World"); /* (1) */
+  }
+}
+```
+1. :testing the annotation
+
+#### js
+```js linenums="1"
+// this is js
+document.getElementById("demo").innerHTML = "Hello JavaScript"; // (1)
+```
+1. :testing the annotation
 
 ## 2. Video integration
 
