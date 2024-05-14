@@ -39,10 +39,10 @@ The mock shebang will be treated like text here: ` #!js var test = 0; `.
 
 ```
 ### 1.3 Code highlighting
-Highlight the codes, currently bash highlighted but suboptimal  
-Start at this <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussion 6504</a> on bash/sh/shell codeblock syntax highlight   
 
 #### bash (suboptimal)
+Currently bash highlighted but suboptimal  
+Start at this <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussion 6504</a> on bash/sh/shell codeblock syntax highlight 
 ```bash linenums="1"
 # this is bash
 wsl --set-default-version 2
@@ -112,8 +112,9 @@ document.getElementById("demo").innerHTML = "Hello JavaScript";
 ```
 
 
-#### php (needs the opening PHP tag)
-Solution: <a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>  
+#### php (suboptimal)
+Currently, php highlighted but required the opening PHP tag <?php
+'Solution': <a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>  
 
 ```php linenums="1"
 // this is php
