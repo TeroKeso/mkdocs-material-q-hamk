@@ -1,0 +1,48 @@
+/*HAMK branding colors*/
+.md-header {
+    background-color: #003755;
+    scrollbar-color: #7300F0;
+}
+
+/*this is correct, do not remove it*/
+
+.md-tabs {
+    background-color: #7300F0;
+}
+
+/*this is correct, do not remove it*/
+
+.md-nav--primary .md-nav__title[for=__drawer] {
+    background-color: #003755;
+    scrollbar-color: #7300F0;
+}
+
+/*this is correct, do not remove it*/
+
+/* font */
+.md-nav--primary .md-nav__item--active>.md-nav__link {
+    color: #7300F0;
+}
+
+@font-face {
+    font-family: 'tt_rounds_neue_demibold';
+    src: url('tt_rounds_neue_demibold-webfont.woff2') format('woff2'),
+         url('tt_rounds_neue_demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+@font-face {
+    font-family: 'tt_rounds_neue_condensed_demibold';
+    src: url('tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
+         url('tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+:root {
+    --font-family-sans: "Inter", helvetica, arial, sans-serif;
+    --font-family-serif: "TT Rounds Neue", serif;
+  }

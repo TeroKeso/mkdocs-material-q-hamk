@@ -1,4 +1,4 @@
-site_name: MkDocs for HAMK BYOD and beyond
+site_name: MkDocs Q HAMK
 theme:
   name: material
   logo: assets/logo.png
@@ -13,26 +13,21 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-    - content.code.annotate
   language: en
   palette: 
-    - scheme: slate # put slate first to make dark mode the default one
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-        primary: red
-        accent: lime
     - scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
         primary: indigo
         accent: pink
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+        primary: red
+        accent: lime
 extra:
-  annotate:
-    json: [.s2]
-    javascript: [.s2]
-    java: [.s2]
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/luonghuyquang
@@ -41,20 +36,14 @@ extra:
 
 markdown_extensions:
   - codehilite:
-      linenums: true # this is required for the code block by indentation only
-      guess_lang: false
-      css_class: highlight
-      pygments_style: friendly
+      linenums: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
-      use_pygments: true
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  - pymdownx.arithmatex:
-      generic: true
 
 extra_css:
   - css/custom.css
