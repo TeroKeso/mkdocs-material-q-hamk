@@ -6,19 +6,32 @@ Bring Your Own Device to study: this is the current page for <a href="https://ha
 This page is built initially following an instruction on <a href="https://www.youtube.com/watch?v=Q-YA_dA8C20" target="_blank">YouTube</a>
 
 ## 1. Code blocks
-### 1.1 Code block by indentation
+### 1.1 Making code blocks
+#### 1.1.1 by indentation
 We are not going to use this option, but using ``` 
 
     # code block by indentation, - codehilite: linenums: true, and css
+    # will remove - codehilite: linenums: true from the yml file
     mkdocs.yml    # The configuration file.
     docs/
        index.md  # The documentation homepage.
        ...       # Other markdown pages, images and other files.
     # suboptimal, lots of workarounds! Following documentation is more efficient!
 
-### 1.2 Code block with ```
-```py linenums="1", hl_lines="9 11 15"
-# Code block with ``` (3 backticks) and linenums="1", hl_lines=""
+#### 1.1.2 using 3 backticks ```
+``` linenums="1"
+# Code block with ``` (3 backticks)
+# for line numbering, use linenums="1"
+mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+```
+
+### 1.2 Highlight entire row
+```py linenums="1", hl_lines="3-5 11 13"
+# Code block with ``` (3 backticks)
+# for line numbering, use linenums="1", to highlight a line, hl_lines=""
 mkdocs.yml    # The configuration file.
 docs/
    index.md  # The documentation homepage.
@@ -26,19 +39,19 @@ docs/
 # useful links:
 hamk.fi
 github.com
-8
-the 9th line is highlighted
+10
+the 11th line is highlighted
 <blank line>
 replace the following with your own 'username' and 'password'
-the `#! python print()` is to print to terminal
-The `#!python range()` function is used to generate a sequence of numbers.
-the '#! python print()' is to print to terminal
-The ' #!python range() ' function is used to generate a sequence of numbers.
-Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.
-The mock shebang will be treated like text here: ` #!js var test = 0; `. 
-
 ```
-### 1.3 Code highlighting
+
+### 1.3 In line highlight
+The following are examples of inline highlight (inlinehilite):  
+1. Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.  
+2. The mock shebang will be treated like text here: ` #!js var test = 0; `.  
+3. Do not expose your `password`.
+
+### 1.4 Code syntax highlight
 
 #### bash (suboptimal)
 Currently bash highlighted but suboptimal  
@@ -203,7 +216,7 @@ ls $the_path
         primary: indigo
 ```
 
-### 1.4 Code annotation
+### 1.5 Code annotation
 #### java
 
 ```java title="helloWorld.jav" linenums="1"
