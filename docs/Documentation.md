@@ -127,7 +127,7 @@ ls $the_path
 ```
 
 ##### css ✓
-```css
+```css linenums="1"
 /*this is css*/
 /*HAMK branding colors*/
 .md-header {
@@ -295,7 +295,7 @@ ls $the_path
 
 #### css annotate ✓
 
-```css hl_lines="4"
+```css linenums="1" hl_lines="4"
 /*this is css*/
 /*HAMK branding colors*/
 .md-header {
