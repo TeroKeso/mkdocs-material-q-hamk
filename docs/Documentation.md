@@ -362,6 +362,17 @@ document.getElementById("demo").innerHTML = "Hello JavaScript"; // (1)!
 
 1. testing the annotation for js
 
+#### json
+
+```json
+{
+"name": "Your Name", /*(1)!*/
+"school": "HAMK"
+}
+```
+
+1. Replace with your name
+
 #### php annotate ✓
 Currently, php highlighted but required the opening PHP tag <?php  
 'Solution': <a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>  
@@ -451,6 +462,30 @@ theme:
 1. I'm a code annotation for yaml! I can contain `code`, __formatted
     text__, images, ... basically anything that can be written in Markdown.
 
+#### annotation inside string
+Can't reproduce <a href='https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/docs/reference/code-blocks.md' target='_blank'>the job here</a> despite jaml setting done.  
+Because <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#custom-selectors' target='_blank'>this is an insiders feature</a> only available for sponsors.  
+Setting for annotation inside string for json
+``` json
+{
+  "key": "value (1)"
+}
+```
+
+1. json value
+
+```yaml title="mkdocs.yml"
+extra:
+  annotate:
+    json: [.s2] # (1)!
+    javascript: [.s2] # (2)!
+    java: [.s2] # (3)!
+```
+
+1. setting for annotation inside string for json
+2. setting for annotation inside string for javascript
+3. setting for annotation inside string for java
+
 ### 4.7 HAMK branding elements
 #### ✓ HAMK color for the head and nav
 #### ... HAMK font
@@ -460,10 +495,11 @@ To set dark mode as default:
 put - scheme: slate as the 1st scheme in palette  
 
 ### 4.9 Zip button to download files
+See the documentation about <a href='https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/?h=zip#creating-a-zip-file' target='_blank'>creating a .zip file</a>  
 
 
 ### 4.10 Integration to videoplatform   
-<a href='https://github.com/squidfunk/mkdocs-material/discussions/3984' target='_blank'>discussions/3984</a>  
+See the discussion at <a href='https://github.com/squidfunk/mkdocs-material/discussions/3984' target='_blank'>discussions/3984</a>  
 
 ## 5. Fantasy
 ### 5.1 VM inside of browser
