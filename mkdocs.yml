@@ -4,16 +4,22 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon/favicon-16x16.png
   features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - navigation.top
-    - search.suggest
-    - search.highlight
     - content.tabs.link
-#    - content.code.annotation
     - content.code.copy
     - content.code.annotate
+    - navigation.tabs
+    - navigation.sections
+#    - navigation.expand # needed for larger webservers
+#    - navigation.path # needed for larger webservers
+    - navigation.top
+    - search
+    - search.sidebar
+    - search.suggest
+    - search.highlight
+#    - toc
+#    - toc.sidebar
+#    - toc.follow
+    - toc.integrate # this integrate the right side toc to the left side nav
   language: en
   palette: 
     - scheme: slate # put slate first to make dark mode the default one
@@ -41,9 +47,11 @@ extra:
 
 markdown_extensions:
   - attr_list
+  - admonition
   - md_in_html
+  - pymdownx.details
   - codehilite:
-      linenums: true # this is required for the code block by indentation only
+#      linenums: true # this is required for the code block by indentation only
       guess_lang: false
       css_class: highlight
       pygments_style: friendly
@@ -57,6 +65,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - toc:
+      permalink: true
+      title: This page's content
+      permalink_title: Q anchor link to this section for reference
 
 extra_css:
   - css/custom.css
