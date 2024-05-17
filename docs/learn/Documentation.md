@@ -99,9 +99,11 @@ Code block with ```: blank lines automatically added after each line when copied
     <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-line-numbers' target='_blank'>MkDocs-material Adding line numbers</a>  
     This add line numbers to specific blocks with this only.
 
-```title=""
-linenums="1"
+```js title=""
+linenums="1" // (1)!
 ```
+
+1. add this code after the 3 backtick (e.g. ``` linenums="1")
 
 !!! info "adding line number for the code blocks by indentation"
     Method for adding line numbers different for the case of code block by indentation (4 indents in each line).  
@@ -111,7 +113,7 @@ linenums="1"
     This option will add line numbers to all code blocks.
     To selectively add line numbers to a particular blocks, use the above method.
 
-```yaml
+```yaml title="mkdocs.yml"
 markdown_extensions:
   - codehilite:
       linenums: true # this is required for the code block by indentation only
@@ -121,7 +123,14 @@ markdown_extensions:
 !!! info "documentation"
     <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-specific-lines-lines' target='_blank'>MkDocs-material Code highlighting</a>  
 
-```py title="" linenums="1" hl_lines="3-5 11 13"
+```js title=""
+hl_lines="2-5 8" // (1)!
+// this will highlight lines 2, 3, 4, 5 and 8
+```
+
+1. add this code after the 3 backtick (e.g. ``` hl_lines="2-5 8")
+
+```py title="example with lines 3-5 11 13" linenums="1" hl_lines="3-5 11 13"
 # Code block with ``` (3 backticks)
 # for line numbering, use linenums="1", to highlight a line, hl_lines=""
 mkdocs.yml    # The configuration file.
@@ -141,12 +150,7 @@ replace the following with your own 'username' and 'password'
 !!! info "documentation"
     <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-inline-code-blocks' target='_blank'>MkDocs-material Highlighting inline code blocks</a>  
 
-The following are examples of inline highlight (inlinehilite):  
-1. Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.  
-2. The mock shebang will be treated like text here: ` #!js var test = 0; `.  
-3. Do not expose your `password`.  
-
-```yaml
+```yaml title="mkdocs.yml"
 markdown_extensions:
   - pymdownx.highlight:
     anchor_linenums: true
@@ -154,19 +158,37 @@ markdown_extensions:
   - pymdownx.snipets
 ```
 
+Examples of inline highlight (inlinehilite):  
+1. Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.  
+2. The python `#!py range()` function is used to generate a sequence of numbers.  
+2b. The python `#!python range()` function is used to generate a sequence of numbers.  
+3. The mock shebang will be treated like code here: `#!js var test = 0;`.  
+3b. The mock shebang will be treated like text here: ` #!js var test = 0; `.  
+4. Do not expose your `password`.  
+
 ### ...4.6 Syntax highlight
 
 !!! info "documentation"
     1. <a href='https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=syntax+hi#inlinehilite' target='_blank'>MkDocs-material Syntax Highlighting</a>  
     2. details <a href='https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=#highlight' target='_blank'>MkDocs-material Python Markdown Extensions Highlight</a>  
-    3. <a href='https://facelessuser.github.io/pymdown-extensions/extensions/highlight/#syntax-highlighting' target='_blank'>FacelessUser Syntax InlineHilite</a>  
-    4. <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussions/6504</a>  
-    5. <a href='https://learn.srlinux.dev/blog/2023/sr-linux-syntax-highlighting-with-pygments/' target='_blank'>SR Linux Syntax Highlighting with Pygments</a>  
+    3. A 'solution' <a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>
+    4. <a href='https://facelessuser.github.io/pymdown-extensions/extensions/highlight/#syntax-highlighting' target='_blank'>FacelessUser Syntax InlineHilite</a>  
+    5. For bash, see the <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussions/6504</a>  
+    6. <a href='https://learn.srlinux.dev/blog/2023/sr-linux-syntax-highlighting-with-pygments/' target='_blank'>SR Linux Syntax Highlighting with Pygments</a>  
 
-```yaml
+```yaml title="mkdocs.yml"
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.inlinehilite
+```
+
+```yaml title="the following is not currently used in this project"
+#markdown_extensions:
+#  - pymdownx.highlight:
+#      anchor_linenums: true
+#      line_spans: __span
+#      use_pygments: true
+#      pygments_lang_class: true
 ```
 
 bash (suboptimal)  

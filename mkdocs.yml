@@ -2,7 +2,7 @@ site_name: MkDocs for HAMK BYOD and beyond
 theme:
   name: material
   logo: assets/logo.png
-  favicon: assets/favicon/favicon-16x16.png
+  favicon: assets/favicon/favicon.png
   features:
     - content.tabs.link
     - content.code.copy
