@@ -38,27 +38,27 @@ Details in 4. Goals below
 ### ✓ 3.2 Input pages
 The <a href='https://hamk-business-information-technology.github.io/os/' target='_blank'>current BYOD page</a> and all of its subpages.
 
-[TOC] # Code blocks
-
-## ... 4. Goals = be better than moodle
+## 4. Goals = be better than moodle
 ### ✓ 4.1 Search
-Integrated
-### ✓ 4.2 Easy to use code copy and paste
-Integrated.  
-#### Bugs and fixes  
-Code block with ```: blank lines automatically added after each line when copied (Some bugs at 9.5.18 fixed at 9.5.22)  
-- bug said fixed (<a href='https://github.com/squidfunk/mkdocs-material/commit/34d789bf8223af143a73d1890aa75a1d5005e3f8' target='_blank'>9.5.21</a>) but problem persisting despite latest mkdocs and mkdocs-material update and rebuild -clean  
-- this may not be related to <a href='https://github.com/squidfunk/mkdocs-material/issues/3360' target='_blank'>highlighting specific lines adds blank lines when copying</a>   
-- safe net <a href='https://github.com/squidfunk/mkdocs-material/issues/7076' target='_blank'>1.5.3</a>  
-- done <a href='https://github.com/squidfunk/mkdocs-material/issues/7170' target='_blank'>/issues/7170</a> then 9.5.22 released  
-### ✓ 4.4 Code line numbering
-Done, only needs some css tuning.  
-Two ways of writing code blocks (recommended to use ``` since we don't have to type 4 indents in each line).   
-#### >>>>> <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/' target='_blank'>Documentation for code blocks</a>
-### ... 4.5 Code block
-#### ✓ 4.5.1 Making code blocks
+!!! info "documentation: Setting up site search"
+    <a href='https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/' target='_blank'>MkDocs-material Setting up site search</a>  
 
-##### by indentation
+```yaml
+theme:
+  features:
+    - search
+    - search.sidebar
+    - search.suggest
+    - search.highlight
+    - search.share
+# the below was not used in this project
+plugins:
+  - search
+```
+
+### Documentation for <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/' target='_blank'> code blocks</a>
+### Making code blocks
+#### by indentation
 We are not going to use this option, but using ``` 
 
     # code block by indentation, - codehilite: linenums: true, and css
@@ -69,8 +69,8 @@ We are not going to use this option, but using ```
        ...       # Other markdown pages, images and other files.
     # suboptimal, lots of workarounds! Following documentation is more efficient!
 
-##### using 3 backticks ```
-``` linenums="1"
+#### using 3 backticks ```
+```title="" linenums="1"
 # Code block with ``` (3 backticks)
 # for line numbering, use linenums="1"
 mkdocs.yml    # The configuration file.
@@ -78,9 +78,50 @@ docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
 ```
+### ✓ 4.2 Easy to use code copy and paste
+!!! info "documentation: Code copy button"
+    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button' target='_blank'>MkDocs-material Code copy button</a>  
+```yaml
+theme:
+  features:
+    - content.code.copy
+```
 
-#### ✓ 4.5.2 Highlight entire row
-```py linenums="1" hl_lines="3-5 11 13"
+#### Bugs and fixes  
+Code block with ```: blank lines automatically added after each line when copied (Some bugs at 9.5.18 fixed at 9.5.22)  
+- bug said fixed (<a href='https://github.com/squidfunk/mkdocs-material/commit/34d789bf8223af143a73d1890aa75a1d5005e3f8' target='_blank'>9.5.21</a>) but problem persisting despite latest mkdocs and mkdocs-material update and rebuild -clean  
+- this may not be related to <a href='https://github.com/squidfunk/mkdocs-material/issues/3360' target='_blank'>highlighting specific lines adds blank lines when copying</a>   
+- safe net <a href='https://github.com/squidfunk/mkdocs-material/issues/7076' target='_blank'>1.5.3</a>  
+- done <a href='https://github.com/squidfunk/mkdocs-material/issues/7170' target='_blank'>/issues/7170</a> then 9.5.22 released  
+
+### ✓ 4.3 Code line numbering
+!!! info "documentation: adding line number for the code blocks by ```"
+    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-line-numbers' target='_blank'>MkDocs-material Adding line numbers</a>  
+    This add line numbers to specific blocks with this only.
+
+```title=""
+linenums="1"
+```
+
+!!! info "adding line number for the code blocks by indentation"
+    Method for adding line numbers different for the case of code block by indentation (4 indents in each line).  
+    Add the following code to mkdocs.yml
+
+???+warning
+    This option will add line numbers to all code blocks.
+    To selectively add line numbers to a particular blocks, use the above method.
+
+```yaml
+markdown_extensions:
+  - codehilite:
+      linenums: true # this is required for the code block by indentation only
+```
+
+### ✓ 4.4 Highlight entire row
+!!! info "documentation"
+    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-specific-lines-lines' target='_blank'>MkDocs-material Code highlighting</a>  
+
+```py title="" linenums="1" hl_lines="3-5 11 13"
 # Code block with ``` (3 backticks)
 # for line numbering, use linenums="1", to highlight a line, hl_lines=""
 mkdocs.yml    # The configuration file.
@@ -90,13 +131,16 @@ docs/
 # useful links:
 hamk.fi
 github.com
-10
+# comment
 the 11th line is highlighted
-<blank line>
+# comment
 replace the following with your own 'username' and 'password'
 ```
 
-#### ✓ 4.5.3 In line highlight
+### ✓ 4.5 In line highlight
+!!! info "documentation"
+    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-inline-code-blocks' target='_blank'>MkDocs-material Highlighting inline code blocks</a>  
+
 The following are examples of inline highlight (inlinehilite):  
 1. Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.  
 2. The mock shebang will be treated like text here: ` #!js var test = 0; `.  
@@ -110,11 +154,33 @@ markdown_extensions:
   - pymdownx.snipets
 ```
 
-#### ...4.5.4 Syntax highlight 
-✓ Done: python, java, js, html, powershell  
- (even done, need checking and improving if needed)  
-... Suboptimal: php (need the leading '<?php')  
-... Suboptimal: bash, sh  
+### ...4.6 Syntax highlight
+
+!!! info "documentation"
+    1. <a href='https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=syntax+hi#inlinehilite' target='_blank'>MkDocs-material Syntax Highlighting</a>  
+    2. details <a href='https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=#highlight' target='_blank'>MkDocs-material Python Markdown Extensions Highlight</a>  
+    3. <a href='https://facelessuser.github.io/pymdown-extensions/extensions/highlight/#syntax-highlighting' target='_blank'>FacelessUser Syntax InlineHilite</a>  
+    4. <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussions/6504</a>  
+    5. <a href='https://learn.srlinux.dev/blog/2023/sr-linux-syntax-highlighting-with-pygments/' target='_blank'>SR Linux Syntax Highlighting with Pygments</a>  
+
+```yaml
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+```
+
+bash (suboptimal)  
+css ✓  
+html (& js) ✓  
+java ✓  
+js ✓  
+php (suboptimal)  
+powershell ✓ (?)  
+python ✓  
+sh (suboptimal)  
+yaml ✓  
+✓ Done: css, html, java, js, powershell, python, yaml (even done, need checking and improving if needed)  
+... Suboptimal: bash, php (need the leading '<?php' or '<?'), powershell(?), sh    
 <a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>
 
 ##### bash (suboptimal)
@@ -173,7 +239,7 @@ document.getElementById("demo").innerHTML = 5 + 6;
 
 ##### java ✓
 
-```java title="helloWorld.jav" linenums="1"
+```java linenums="1"
 // this is java
 public class Main {
   public static void main(String[] args) {
@@ -280,9 +346,12 @@ ls $the_path
         primary: indigo
 ```
 
-### ✓ 4.6 Code annotation
+### ✓ 4.7 Code annotation
 Each line can host only one annotation.  
-<a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations'>mkdocs-material/reference/code-blocks/#code-annotations</a>  
+
+!!! info "documentation"
+    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations' target='_blank'>MkDocs-material Code annotation Configuration</a>  
+    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations' target='_blank'>MkDocs-material Code annotation Usage</a>  
 
 #### bash annotate ✓
 ```bash linenums="1" hl_lines="3"
@@ -346,7 +415,7 @@ document.getElementById("demo").innerHTML = 5 + 6; // (2)
 
 #### java annotate ✓
 
-```java title="helloWorld.jav" linenums="1"  hl_lines="4"
+```java linenums="1"  hl_lines="4"
 // this is java
 public class Main {
   public static void main(String[] args) {
@@ -452,7 +521,7 @@ echo -e "\n you path has the following files and folders: "
 ls $the_path
 ```
 
-1. \n to go to next line at the end of the printed content
+1. \n to go to next line and print the content after \n (in this example, "enter the path to directory" will be printed in the next line)
 
 #### yaml annotate ✓
 ```yaml linenums="1" hl_lines="4"
@@ -465,7 +534,7 @@ theme:
 1. I'm a code annotation for yaml! I can contain `code`, __formatted
     text__, images, ... basically anything that can be written in Markdown.
 
-#### annotation inside string
+#### [deprioritized] annotation inside string (insider only)
 Can't reproduce <a href='https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/docs/reference/code-blocks.md' target='_blank'>the job here</a> despite jaml setting done.  
 Because <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#custom-selectors' target='_blank'>this is an insiders feature</a> only available for sponsors.  
 Setting for annotation inside string for json
@@ -489,19 +558,32 @@ extra:
 2. setting for annotation inside string for javascript
 3. setting for annotation inside string for java
 
-### 4.7 HAMK branding elements
-#### ✓ HAMK color for the head and nav
+### 4.8 HAMK branding elements
+
+!!! info "documentation"
+    1 <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>hamkin-brandi</a>  
+    2 <a href='https://hamk.mediaflowportal.com/mediapankki/' target='_blank'>mediapankki</a>  
+    3 <a href='https://www.hamk.fi/en/hamk-renewed-its-brand/' target='_blank'>hamk-renewed-its-brand</a>  
+    4 <a href='https://hamk.mediaflowportal.com/folder/754905/' target='_blank'>hamk.mediaflowportal</a>  
+
+#### ✓ HAMK colors
+HEX #003755  = HAMK dark blue  
+HEX #7300F0 = HAMK pink  
+rgb(0, 55, 85) to hex = #003755  
+rgb(238, 238, 238) = #EEEEEE  
 #### ... HAMK font
 
-### ✓ 4.8. Dark mode as default
+#### HAMK logo
+<a href='https://www.hamk.fi/wp-content/themes/hamk/dist/graphic-background-full.svg?v=081d95ef6e7655f27b90'>HAMK logo black on white</a>
+
+### ✓ 4.9 Dark mode as default
 To set dark mode as default:  
 put - scheme: slate as the 1st scheme in palette  
 
-### 4.9 Zip button to download files
+### 4.10 Zip button to download files
 See the documentation about <a href='https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/?h=zip#creating-a-zip-file' target='_blank'>creating a .zip file</a>  
 
-
-### 4.10 Integration to videoplatform   
+### 4.11 Integration to videoplatform   
 See the discussion at <a href='https://github.com/squidfunk/mkdocs-material/discussions/3984' target='_blank'>discussions/3984</a>  
 
 ## 5. Fantasy
@@ -520,10 +602,6 @@ Logo (path: )
 Favicon (path: )  
 
 #### 6.3 Code block with ``` better supported than by indentation
-**HAMK colors:**   
-rgb(0, 55, 85) to hex = #003755  
-rgb(238, 238, 238) #EEEEEE  
-<a href='https://www.hamk.fi/wp-content/themes/hamk/dist/graphic-background-full.svg?v=081d95ef6e7655f27b90'>HAMK colors</a>
 
 #### 6.4 Navigation bar (left side) and TOC (right side)
 ???+ info
@@ -543,7 +621,7 @@ hide:
   - toc
 ---
 
-# Page title
+# Page title (as the 1st h1 element)
 ...
 ```
 
