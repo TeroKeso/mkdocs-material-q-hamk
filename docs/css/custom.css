@@ -1,29 +1,28 @@
 /*HAMK branding colors*/
-.md-header {
+.md-header { /*this is correct, do not remove it*/
     background-color: #003755;
     scrollbar-color: #7300F0;
 }
 
-/*this is correct, do not remove it*/
-
-.md-tabs {
+.md-tabs { /*this is correct, do not remove it*/
     background-color: #7300F0;
 }
 
-/*this is correct, do not remove it*/
-
-.md-nav--primary .md-nav__title[for=__drawer] {
+.md-nav--primary .md-nav__title[for=__drawer] { /*this is correct, do not remove it*/
     background-color: #003755;
     scrollbar-color: #7300F0;
 }
 
-/*this is correct, do not remove it*/
 
-/* font */
+/* font for the nav (right side nav)*/
+/* this is correct, but color should be different for better visibility*/
+/*
 .md-nav--primary .md-nav__item--active>.md-nav__link {
     color: #7300F0;
 }
+*/
 
+/* below are experimental for HAMK font use */
 @font-face {
     font-family: 'tt_rounds_neue_demibold';
     src: url('tt_rounds_neue_demibold-webfont.woff2') format('woff2'),
