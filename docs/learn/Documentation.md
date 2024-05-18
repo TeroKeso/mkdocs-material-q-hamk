@@ -582,25 +582,69 @@ extra:
 
 ### 4.8 HAMK branding elements
 
-!!! info "documentation"
+!!! info "HAMK documentation"
     1 <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>hamkin-brandi</a>  
     2 <a href='https://hamk.mediaflowportal.com/mediapankki/' target='_blank'>mediapankki</a>  
     3 <a href='https://www.hamk.fi/en/hamk-renewed-its-brand/' target='_blank'>hamk-renewed-its-brand</a>  
     4 <a href='https://hamk.mediaflowportal.com/folder/754905/' target='_blank'>hamk.mediaflowportal</a>  
 
-#### ✓ HAMK colors
+#### ...HAMK colors
+???+ note "documentation"
+    <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/'>MkDocs-material Changing the colors</a>
 HEX #003755  = HAMK dark blue  
 HEX #7300F0 = HAMK pink  
 rgb(0, 55, 85) to hex = #003755  
 rgb(238, 238, 238) = #EEEEEE  
-#### ... HAMK font
 
-#### HAMK logo
-<a href='https://www.hamk.fi/wp-content/themes/hamk/dist/graphic-background-full.svg?v=081d95ef6e7655f27b90'>HAMK logo black on white</a>
+
+####  ✓ HAMK logo
+
+???+ note "documentation"
+    <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/'>MkDocs-material Changing the logo and icons</a>
+
+HAMK logo (white on transparent) used as logo and favicon.  
+Other HAMK logo, <a href='https://www.hamk.fi/wp-content/themes/hamk/dist/graphic-background-full.svg?v=081d95ef6e7655f27b90'>black on transparent</a>:  
+![HAMK logo](./assets/HAMK.logo.wp.jfif)  
+
+#### ...HAMK fonts
+
+???+ note "documentation"
+    <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/'>MkDocs-material Changing the fonts</a>
+
+CSS settings for font families (from the <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>HAMKin brandi page</a>):  
+![HAMK font families](./assets/HAMK.font_families.jfif)  
+
+TT Rounds Neu Demi Bold <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fonts/ttroundsneue_demibold_macroman/tt_rounds_neue_demibold-demo.html' target='_blank'>Demo</a>
+???+ info "HAMK documentation"
+    CSS setting as guided in the HAMK font .zip file <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fonts/ttroundsneue_demibold_macroman/stylesheet.css' target='_blank'>tt_rounds_neue_demibold</a> and <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fonts/ttroundsneuecondensed_demibold_macroman/stylesheet.css' target='_blank'>tt_rounds_neue_condensed_demibold</a>
+
+```css
+@font-face {
+    font-family: 'tt_rounds_neue_demibold';
+    src: url('./tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
+         url('./tt_rounds_neue_demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tt_rounds_neue_condensed_demibold';
+    src: url('./tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
+         url('./tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+```
+
 
 ### ✓ 4.9 Dark mode as default
+
+???+ note "documentation"
+    <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle'>MkDocs-material Color palette toggle</a>
+
 To set dark mode as default:  
-put - scheme: slate as the 1st scheme in palette  
+put - scheme: slate as the 1st scheme in palette (when the user first visits our site, the media queries are evaluated in the order of their definition.)  
+See also <a href='./#deprioritized-74-switch-to-system-preference-beside-the-dual-dark-light'> 7.4 Switch to 'system preference' beside the dual dark / light</a>
 
 ### 4.10 Zip button to download files
 See the documentation about <a href='https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/?h=zip#creating-a-zip-file' target='_blank'>creating a .zip file</a>  
@@ -690,8 +734,14 @@ Analytic tools, number of users, time of use, heatmap etc.
 Indexed by SEs such as Google  
 
 ### ✓ [deprioritized] 7.4 Switch to 'system preference' beside the dual dark / light
-Example  
+
+???+ note "documentation - easy"
+    - <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode' target='_blank'>MkDocs-material Automatic light / dark mode</a>
+
+Example of page using this:  
 - <a href='https://squidfunk.github.io/mkdocs-material/' target='_blank'>material for MkDocs</a>  
+
+
 
 ### ? MkDocs material page itself
 The page does not allow ping or tracert  
@@ -720,11 +770,11 @@ Admonitions to use: <a href='https://squidfunk.github.io/mkdocs-material/referen
 <iframe src='../assets/poster_mi24_final.pdf' width=100% height=700px>This browser does not support PDFs. Please download the PDF to view it: <a href='../assets/poster_mi24_final.pdf'>Download PDF</a>
 </iframe>
 
-D:\mkdocs-material-q-hamk\docs\learn\assets\poster_mi24_final.pdf
-
-
 | Header 1 | Header 2 | Header 3 |
 |-:|-|-|
 | 1.1 | 1.2 | 1.3 |
 | 2.1 | 2.2 | 2.3 |
 | 3.1 | I want more thing here. Try to see how long it can be. Oh how to go down the line. It cannot be foever long. Help yourself because the Universe or God gives you the strength to do so. This is very powerful. I need to do more. Will you go with me in this endeavor. Yes, this is interesting. Everyone will be rewarded by what they'd done| Row 3, Col 3. Table is good to read but hard to write. How do we have a balance. Tell me please. I want to be the master of this material. I will give you the necessary guidance.|
+
+
+Suomenkielistä logoversiota käytetään suomenkielisissä yhteyksissä ja englanninkielistä englanninkielisissä. Käyttötilanteissa, joissa on sekä suomen- että vieraskielisiä yleisöjä (esim. opasteet, kyltit) käytetään ensisijaisesti englanninkielistä versiota.

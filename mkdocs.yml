@@ -22,18 +22,18 @@ theme:
 #    - toc.integrate # this integrate the right side toc to the left side nav
   language: en
   palette: 
-    - scheme: slate # put slate first to make dark mode the default one
+    - scheme: slate #HAMK # put slate first to make dark mode the default one
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-        primary: red
-        accent: lime
-    - scheme: default
+        primary: custom
+        accent: custom
+    - scheme: default #HAMK #
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-        primary: indigo
-        accent: pink
+        primary: custom
+        accent: custom
 extra:
   annotate:
     json: [.s2] # (1)!
@@ -44,6 +44,8 @@ extra:
       link: https://github.com/luonghuyquang
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/luonghuyquang/
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:quang.luong@student.hamk.fi
 
 markdown_extensions:
   - attr_list
@@ -73,6 +75,7 @@ markdown_extensions:
       permalink_title: anchor link to this section for reference
 
 extra_css:
+  - https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap
   - css/custom.css
 
 #plugins:

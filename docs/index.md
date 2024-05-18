@@ -1,14 +1,21 @@
-# Index
+---
+title: Index
+---
+# Demo site
 
-## 1. Current <a href="https://hamk-business-information-technology.github.io/os/" target="_blank">HAMK BYOD guide</a> page.
+<a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:quang.luong@student.hamk.fi?subject=HAMK New Byod feedback&amp;body=I have some feedback about the page titled ' + encodeURIComponent(document.title) + ' at the URL: ' + encodeURIComponent(window.location.href);"><i class="fa fa-envelope-o"></i> Feedback</a>
 
-## 2. Experimenting  <a href='./byod/1.WinUsers/'>BYOD with Mkdocs material</a>
 
-## 3. The <a href='./learn/Documentation/#42-easy-to-use-code-copy-and-paste'>Documentation</a> page for this project
 
-## 4. Video integration
+### 1. Experimenting  <a href='./byod/1.WinUsers/'>BYOD with Mkdocs material</a>
+???+ note
+    Current <a href="https://hamk-business-information-technology.github.io/os/" target="_blank">HAMK BYOD guide</a> page.
 
-## 5. VM integration
+### 2. The <a href='./learn/Documentation/#42-easy-to-use-code-copy-and-paste'>Documentation</a> page for this project
+
+### 3. Video integration
+
+### 4. VM integration
 
 ???+ info
     This page is built initially following <a href="https://www.youtube.com/watch?v=Q-YA_dA8C20" target="_blank">an instruction</a> on YouTube.
