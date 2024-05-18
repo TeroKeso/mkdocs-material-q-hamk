@@ -740,12 +740,11 @@ Indexed by SEs such as Google
 
 ### ✓ [deprioritized] 7.4 Switch to 'system preference' beside the dual dark / light
 
-???+ note "documentation - easy"
+???+ note "documentation"
     - <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode' target='_blank'>MkDocs-material Automatic light / dark mode</a>
 
 Example of page using this:  
 - <a href='https://squidfunk.github.io/mkdocs-material/' target='_blank'>material for MkDocs</a>  
-
 
 
 ### ? MkDocs material page itself

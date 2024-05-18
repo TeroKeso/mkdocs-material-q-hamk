@@ -21,19 +21,29 @@ theme:
 #    - toc.follow
 #    - toc.integrate # this integrate the right side toc to the left side nav
   language: en
-  palette: 
+  palette:
+    # Palette toggle for dark mode
     - scheme: slate #HAMK # put slate first to make dark mode the default one
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
         primary: custom
         accent: custom
+    # Palette toggle for light mode
     - scheme: default #HAMK #
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
         primary: custom
         accent: custom
+    # Palette toggle for automatic mode
+    #- media: "(prefers-color-scheme)"
+    #  toggle:
+    #    icon: material/brightness-auto
+    #    name: Switch to light mode
+    #    primary: custom
+    #    accent: custom
+
 extra:
   annotate:
     json: [.s2] # (1)!
