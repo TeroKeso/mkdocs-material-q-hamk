@@ -113,7 +113,7 @@ linenums="1" // (1)!
     This option will add line numbers to all code blocks.
     To selectively add line numbers to a particular blocks, use the above method.
 
-```yaml title="mkdocs.yml"
+```yaml title="mkdocs.yml" linenums="1"
 markdown_extensions:
   - codehilite:
       linenums: true # this is required for the code block by indentation only
@@ -162,8 +162,8 @@ Examples of inline highlight (inlinehilite):
 1. Here is some code: `#!py3 import pymdownx; pymdownx.__version__`.  
 2. The python `#!py range()` function is used to generate a sequence of numbers.  
 2b. The python `#!python range()` function is used to generate a sequence of numbers.  
-3. The mock shebang will be treated like code here: `#!js var test = 0;`.  
-3b. The mock shebang will be treated like text here: ` #!js var test = 0; `.  
+3. The mock shebang will be treated like code here: `#!js var text = 'HAMK';`.  
+3b. The mock shebang will be treated like text here: ` #!js var  text = 'HAMK'; `.  
 4. Do not expose your `password`.  
 
 ### ...4.6 Syntax highlight
@@ -196,14 +196,15 @@ css ✓
 html (& js) ✓  
 java ✓  
 js ✓  
+json ✓  
 php (suboptimal)  
 powershell ✓ (?)  
 python ✓  
 sh (suboptimal)  
 yaml ✓  
-✓ Done: css, html, java, js, powershell, python, yaml (even done, need checking and improving if needed)  
+✓ Done: css, html, java, js, json, powershell, python, yaml (even done, need checking and improving if needed)  
 ... Suboptimal: bash, php (need the leading '<?php' or '<?'), powershell(?), sh    
-<a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>
+<a href='https://github.com/squidfunk/mkdocs-material/issues/138' target='_blank'>work around for php</a>
 
 ##### bash (suboptimal)
 Currently bash highlighted but suboptimal  
@@ -276,10 +277,18 @@ public class Main {
 document.getElementById("demo").innerHTML = "Hello JavaScript";
 ```
 
+##### json ✓
+
+```json
+{
+"name": "Your Name",
+"school": "HAMK"
+}
+```
 
 ##### php (suboptimal)
 Currently, php highlighted but required the opening PHP tag <?php
-'Solution': <a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>  
+'Solution': <a href='https://github.com/squidfunk/mkdocs-material/issues/138' target='_blank'>work around for php</a>  
 
 ```php linenums="1"
 // this is php
@@ -325,8 +334,6 @@ data = 'hello world'
 print(data[0])
 print(len(data))
 print(data)
-the `#!python print()` is to print to terminal
-The '#!python range()' function is used to generate a sequence of numbers.
 ```
 
 ##### sh (suboptimal)
@@ -456,7 +463,7 @@ document.getElementById("demo").innerHTML = "Hello JavaScript"; // (1)!
 
 1. testing the annotation for js
 
-#### json
+#### json annotate ✓
 
 ```json
 {
