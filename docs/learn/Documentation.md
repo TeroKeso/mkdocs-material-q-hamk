@@ -588,14 +588,14 @@ extra:
     3 <a href='https://www.hamk.fi/en/hamk-renewed-its-brand/' target='_blank'>hamk-renewed-its-brand</a>  
     4 <a href='https://hamk.mediaflowportal.com/folder/754905/' target='_blank'>hamk.mediaflowportal</a>  
 
-#### ...HAMK colors
+#### ...HAMK colors (✓ for header and nav)
 ???+ note "documentation"
     <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/'>MkDocs-material Changing the colors</a>
-HEX #003755  = HAMK dark blue  
-HEX #7300F0 = HAMK pink  
-rgb(0, 55, 85) to hex = #003755  
-rgb(238, 238, 238) = #EEEEEE  
 
+```css title="HAMK colors"
+HAMK dark blue  = HEX #003755 = rgb(0, 55, 85)
+HAMK pink = HEX #7300F0 = rgb(115, 0, 240)
+```
 
 ####  ✓ HAMK logo
 
@@ -606,10 +606,11 @@ HAMK logo (white on transparent) used as logo and favicon.
 Other HAMK logo, <a href='https://www.hamk.fi/wp-content/themes/hamk/dist/graphic-background-full.svg?v=081d95ef6e7655f27b90'>black on transparent</a>:  
 ![HAMK logo](./assets/HAMK.logo.wp.jfif)  
 
-#### ...HAMK fonts
+#### ✓ HAMK fonts
 
 ???+ note "documentation"
     <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/'>MkDocs-material Changing the fonts</a>
+Would customize h elements vs body if needed.  
 
 CSS settings for font families (from the <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>HAMKin brandi page</a>):  
 ![HAMK font families](./assets/HAMK.font_families.jfif)  
@@ -618,25 +619,29 @@ TT Rounds Neu Demi Bold <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fon
 ???+ info "HAMK documentation"
     CSS setting as guided in the HAMK font .zip file <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fonts/ttroundsneue_demibold_macroman/stylesheet.css' target='_blank'>tt_rounds_neue_demibold</a> and <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fonts/ttroundsneuecondensed_demibold_macroman/stylesheet.css' target='_blank'>tt_rounds_neue_condensed_demibold</a>
 
-```css
-@font-face {
-    font-family: 'tt_rounds_neue_demibold';
-    src: url('./tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
-         url('./tt_rounds_neue_demibold-webfont.woff') format('woff');
+```css title="actual settings of this site"
+:root { /* from the hamkin-brandi page, together with guidance in the .pptx file */
+    --font-family-sans: 'Inter', Helvetica, Arial, sans-serif; 
+    --font-family-serif: 'TT Rounds Neue', 'Arial Rounded MT', serif; 
+}
+@font-face {/* adapted from the HAMK font .zip file */
+    font-family: 'TT Rounds Neue';
+    src: url('../assets/tt_rounds_neue_demibold-webfont.woff2') format('woff2'),
+         url('../assets/tt_rounds_neue_demibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'tt_rounds_neue_condensed_demibold';
-    src: url('./tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
-         url('./tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
+@font-face {/* from the HAMK font .zip file */
+    font-family: 'TT Rounds Neue Condensed';
+    src: url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
+         url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 ```
 
-Sample texts to view  
+Sample texts from the <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>HAMKin brandi page</a> to view and compare  
 
 **Hämeen ammattikorkeakoulu (HAMK) on oppimis- ja tutkimusyhteisö tekijöille, jotka haluavat muuttaa maailmaa.** Meitä on noin 10 000 biotalouden, hyvinvoinnin, koulutuksen, liiketoiminnan, muotoilun ja teknologian tulevaisuuden tekijää. Toimimme seitsemällä kampuksella, verkossa ja kansainvälisesti. Opiskelijoille, henkilöstölle ja yhteistyökumppaneillemme tarjoamme erinomaiset työkalut ja ympäristöt tehdä työtä ja hyödyllisiä tekoja yhdessä.  
 
@@ -771,5 +776,5 @@ Admonitions to use: <a href='https://squidfunk.github.io/mkdocs-material/referen
 
 ### 7.7 Embedding pdf
 
-<iframe src='../assets/poster_mi24_final.pdf' width=100% height=700px>This browser does not support PDFs. Please download the PDF to view it: <a href='../assets/poster_mi24_final.pdf'>Download PDF</a>
+<iframe src='../assets/pdf/poster_mi24_final.pdf' width=100% height=700px>This browser does not support PDFs. Please download the PDF to view it: <a href='../assets/pdf/poster_mi24_final.pdf'>Download PDF</a>
 </iframe>

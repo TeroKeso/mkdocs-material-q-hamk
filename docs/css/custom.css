@@ -1,5 +1,6 @@
-/*HAMK branding colors*/
-.md-header { /*this is correct, do not remove it*/
+/* HAMK branding colors */
+
+.md-header, .md-nav--primary .md-nav__title[for=__drawer] { /*this is correct, do not remove it*/
     background-color: #003755;
     scrollbar-color: #7300F0;
 }
@@ -8,22 +9,19 @@
     background-color: #7300F0;
 }
 
-.md-nav--primary .md-nav__title[for=__drawer] { /*this is correct, do not remove it*/
-    background-color: #003755;
-    scrollbar-color: #7300F0;
-}
-
-[data-md-color-scheme='HAMK'] { /* from documentation, but not switchable yet on dark and light modes */
+/* from documentation, but not switchable yet on dark and light modes 
+[data-md-color-scheme='HAMK'] {
     --md-primary-fg-color:        #003755;
     --md-primary-fg-color--light: #7300F0;
     --md-primary-fg-color--dark:  #003755;
 }
 
-[data-md-color-scheme] { /* from documentation, but not switchable yet on dark and light modes */
+[data-md-color-scheme] {
     --md-primary-fg-color:        #003755;
     --md-primary-fg-color--light: #7300F0;
     --md-primary-fg-color--dark:  #003755;
 }
+*/
 /* font for the nav (right side nav)*/
 /* this is correct, but color should be different for better visibility*/
 /*
@@ -32,30 +30,35 @@
 }
 */
 
-/* below are experimental for HAMK font use */
+@font-face {/* from the HAMK font .zip file */
+    font-family: 'TT Rounds Neue';
+    src: url('../assets/tt_rounds_neue_demibold-webfont.woff2') format('woff2'),
+         url('../assets/tt_rounds_neue_demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {/* from the HAMK font .zip file */
+    font-family: 'TT Rounds Neue Condensed';
+    src: url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
+         url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
-    --font-family-sans: 'Inter', helvetica, arial, sans-serif; /* from the hamkin-brandi page */
+    --font-family-sans: 'Inter', Helvetica, Arial, sans-serif; /* from the hamkin-brandi page */
     --font-family-serif: 'TT Rounds Neue', 'Arial Rounded MT', serif; /* from the hamkin-brandi page */
-    --md-primary-fg-color:        #003755; /* currently not works */
-    --md-primary-fg-color--light: #7300F0; /* currently not works */
-    --md-primary-fg-color--dark:  #003755; /* currently not works */
-    --md-text-font: 'Inter';
+/* currently not works 
+    --md-primary-fg-color:        #003755;
+    --md-primary-fg-color--light: #7300F0; 
+    --md-primary-fg-color--dark:  #003755; 
+*/
+
+    --md-text-font: var(--font-family-sans); 
     --md-code-font: 'Roboto Mono';
 }
 
-@font-face { /* from the HAMK font .zip file */
-    font-family: 'tt_rounds_neue_demibold';
-    src: url('./tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
-         url('./tt_rounds_neue_demibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face { /* from the HAMK font .zip file */
-    font-family: 'tt_rounds_neue_condensed_demibold';
-    src: url('./tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
-         url('./tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+h1, h2, h3, h4, h5, h6, .md-ellipsis, .md-tabs__link {
+    font-family: var(--font-family-serif)
 }
