@@ -636,6 +636,11 @@ TT Rounds Neu Demi Bold <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fon
 }
 ```
 
+Sample texts to view  
+
+**Hämeen ammattikorkeakoulu (HAMK) on oppimis- ja tutkimusyhteisö tekijöille, jotka haluavat muuttaa maailmaa.** Meitä on noin 10 000 biotalouden, hyvinvoinnin, koulutuksen, liiketoiminnan, muotoilun ja teknologian tulevaisuuden tekijää. Toimimme seitsemällä kampuksella, verkossa ja kansainvälisesti. Opiskelijoille, henkilöstölle ja yhteistyökumppaneillemme tarjoamme erinomaiset työkalut ja ympäristöt tehdä työtä ja hyödyllisiä tekoja yhdessä.  
+
+Suomenkielistä logoversiota käytetään suomenkielisissä yhteyksissä ja englanninkielistä englanninkielisissä. Käyttötilanteissa, joissa on sekä suomen- että vieraskielisiä yleisöjä (esim. opasteet, kyltit) käytetään ensisijaisesti englanninkielistä versiota.
 
 ### ✓ 4.9 Dark mode as default
 
@@ -769,12 +774,3 @@ Admonitions to use: <a href='https://squidfunk.github.io/mkdocs-material/referen
 
 <iframe src='../assets/poster_mi24_final.pdf' width=100% height=700px>This browser does not support PDFs. Please download the PDF to view it: <a href='../assets/poster_mi24_final.pdf'>Download PDF</a>
 </iframe>
-
-| Header 1 | Header 2 | Header 3 |
-|-:|-|-|
-| 1.1 | 1.2 | 1.3 |
-| 2.1 | 2.2 | 2.3 |
-| 3.1 | I want more thing here. Try to see how long it can be. Oh how to go down the line. It cannot be foever long. Help yourself because the Universe or God gives you the strength to do so. This is very powerful. I need to do more. Will you go with me in this endeavor. Yes, this is interesting. Everyone will be rewarded by what they'd done| Row 3, Col 3. Table is good to read but hard to write. How do we have a balance. Tell me please. I want to be the master of this material. I will give you the necessary guidance.|
-
-
-Suomenkielistä logoversiota käytetään suomenkielisissä yhteyksissä ja englanninkielistä englanninkielisissä. Käyttötilanteissa, joissa on sekä suomen- että vieraskielisiä yleisöjä (esim. opasteet, kyltit) käytetään ensisijaisesti englanninkielistä versiota.
