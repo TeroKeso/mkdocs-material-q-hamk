@@ -3,11 +3,26 @@
 .md-header, .md-nav--primary .md-nav__title[for=__drawer] { /*this is correct, do not remove it*/
     background-color: #003755;
     scrollbar-color: #7300F0;
+    color: #D7AFFF;
+}
+
+.md-icon { /*this is correct, do not remove it*/
+    color: #D7AFFF;
 }
 
 .md-tabs { /*this is correct, do not remove it*/
-    background-color: #7300F0;
+    background-color: #D7AFFF;
+    color: #7300F0;
 }
+
+.md-tabs__item .md-tabs__link, .md-tabs__item--active .md-tabs__link { /*this is correct, do not remove it*/
+    color: black;
+}
+
+.md-ellipsis:hover { /*this is correct, do not remove it*/
+    color: #7300F0;
+}
+
 
 /* from documentation, but not switchable yet on dark and light modes 
 [data-md-color-scheme='HAMK'] {
@@ -56,7 +71,7 @@
 */
 
     --md-text-font: var(--font-family-sans); 
-    --md-code-font: 'Roboto Mono';
+    --md-code-font: 'Roboto Mono', 'Courier';
 }
 
 h1, h2, h3, h4, h5, h6, .md-ellipsis, .md-tabs__link {

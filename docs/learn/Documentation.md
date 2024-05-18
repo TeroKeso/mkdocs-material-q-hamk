@@ -580,7 +580,7 @@ extra:
 2. setting for annotation inside string for javascript
 3. setting for annotation inside string for java
 
-### 4.8 HAMK branding elements
+### ✓ 4.8 HAMK branding elements
 
 !!! info "HAMK documentation"
     1 <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>hamkin-brandi</a>  
@@ -588,16 +588,17 @@ extra:
     3 <a href='https://www.hamk.fi/en/hamk-renewed-its-brand/' target='_blank'>hamk-renewed-its-brand</a>  
     4 <a href='https://hamk.mediaflowportal.com/folder/754905/' target='_blank'>hamk.mediaflowportal</a>  
 
-#### ...HAMK colors (✓ for header and nav)
+#### ✓ HAMK colors (for header and nav)
 ???+ note "documentation"
     <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/'>MkDocs-material Changing the colors</a>
 
 ```css title="HAMK colors"
 HAMK dark blue  = HEX #003755 = rgb(0, 55, 85)
 HAMK pink = HEX #7300F0 = rgb(115, 0, 240)
+HAMK light pink = HEX #D7AFFF = rgb(215, 175, 255)
 ```
 
-####  ✓ HAMK logo
+####  ✓ HAMK logo (& favicon)
 
 ???+ note "documentation"
     <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/'>MkDocs-material Changing the logo and icons</a>
