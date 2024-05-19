@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Create an icon element
         const icon = document.createElement('i');
-        icon.classList.add('fas', 'fa-envelope');
+        icon.classList.add('far', 'fa-envelope');
         icon.setAttribute('aria-hidden', 'true');
 
         // Append the icon and text node to the link element

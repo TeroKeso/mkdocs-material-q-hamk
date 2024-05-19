@@ -664,7 +664,7 @@ To set dark mode as default:
 put - scheme: slate as the 1st scheme in palette (when the user first visits our site, the media queries are evaluated in the order of their definition.)  
 See also <a href='./#deprioritized-74-switch-to-system-preference-beside-the-dual-dark-light'> 7.4 Switch to 'system preference' beside the dual dark / light</a>
 
-### 4.10 Send email feedback button
+### ✓ 4.10 Send email feedback button
 Current Feedback button in the old BYOD site:
 ```html
 <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:deepak.curator@gmail.com?subject=HAMK New Byod feedback&amp;body=I have some feedback about the page titled ' + encodeURIComponent(document.title) + ' at the URL: ' + encodeURIComponent(window.location.href);"><i class="fa fa-envelope-o"></i> Feedback</a>
@@ -686,7 +686,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Create an icon element
         const icon = document.createElement('i');
-        icon.classList.add('fas', 'fa-envelope');
+        icon.classList.add('far', 'fa-envelope'); // 'far' for Regular (outlined) envelope, 'fas' for solid (S)
         icon.setAttribute('aria-hidden', 'true');
 
         // Append the icon and text node to the link element
