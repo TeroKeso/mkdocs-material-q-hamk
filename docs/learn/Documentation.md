@@ -614,6 +614,14 @@ HAMK logo (white on transparent) used as logo and favicon.
 Other HAMK logo, <a href='https://www.hamk.fi/wp-content/themes/hamk/dist/graphic-background-full.svg?v=081d95ef6e7655f27b90'>black on transparent</a>:  
 ![HAMK logo](./assets/HAMK.logo.wp.jfif)  
 
+Logo and Favicon:  
+```yaml title="mkdocs.yml"
+theme:
+  name: material
+  logo: assets/logo_light_pink.png # or logo_white.png
+  favicon: assets/favicon/favicon.png
+```
+
 #### ✓ HAMK fonts
 
 ???+ note "documentation"
@@ -715,20 +723,15 @@ See the discussion at <a href='https://github.com/squidfunk/mkdocs-material/disc
 ### 5.1 VM inside of browser
 ### 5.2 Integration on VM
 
-
 ## 6. Tech notes
 #### 6.1 CSS: 
 Central CSS (root):  
 site\assets\stylesheets (govern light and dark mode)  
 Custom CSS (custom.css)  
 
-#### 6.2 Branding items
-Logo (path: )  
-Favicon (path: )  
+#### 6.2 Code block with ``` better supported than by indentation
 
-#### 6.3 Code block with ``` better supported than by indentation
-
-#### 6.4 Navigation bar (left side) and TOC (right side)
+#### 6.3 Navigation bar (left side) and TOC (right side)
 ???+ info
     Standard mkdocs-material terms: nav (right side bar), toc (left side bar)
 For small site, use the following setting to integrate the toc to the left side.
