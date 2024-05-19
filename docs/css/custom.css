@@ -77,3 +77,18 @@
 h1, h2, h3, h4, h5, h6, .md-ellipsis, .md-tabs__link {
     font-family: var(--font-family-serif)
 }
+
+/* For the email feedback button, putting to the search div */
+.md-search {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
+}
+.custom-email-link i {  /* Adjust the envelope icon */
+    margin-right: 8px;
+    margin-left: 12px;
+    font-size: 16px;
+}
+.custom-email-link { /* Adjust the 'Feedback' text */
+    font-size: 14px;
+    vertical-align: middle;
+}

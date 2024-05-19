@@ -664,10 +664,51 @@ To set dark mode as default:
 put - scheme: slate as the 1st scheme in palette (when the user first visits our site, the media queries are evaluated in the order of their definition.)  
 See also <a href='./#deprioritized-74-switch-to-system-preference-beside-the-dual-dark-light'> 7.4 Switch to 'system preference' beside the dual dark / light</a>
 
-### 4.10 Zip button to download files
+### 4.10 Send email feedback button
+Current Feedback button in the old BYOD site:
+```html
+<a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:deepak.curator@gmail.com?subject=HAMK New Byod feedback&amp;body=I have some feedback about the page titled ' + encodeURIComponent(document.title) + ' at the URL: ' + encodeURIComponent(window.location.href);"><i class="fa fa-envelope-o"></i> Feedback</a>
+```
+<a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:deepak.curator@gmail.com?subject=HAMK New Byod feedback&amp;body=I have some feedback about the page titled ' + encodeURIComponent(document.title) + ' at the URL: ' + encodeURIComponent(window.location.href);"><i class="fa fa-envelope-o"></i> Feedback</a> 
+
+Solution for Mkdocs:  
+Set separate js to incorporate the button to footer:  
+```js
+document.addEventListener('DOMContentLoaded', function() {
+    const ellipsisContainer = document.querySelector('.md-search');
+    if (ellipsisContainer) {
+        const mailtoLink = document.createElement('a');
+        mailtoLink.href = '#';
+        mailtoLink.classList.add('custom-email-link');
+
+        // Create a text node saying 'Feedback''
+        const textNode = document.createTextNode('Feedback');
+
+        // Create an icon element
+        const icon = document.createElement('i');
+        icon.classList.add('fas', 'fa-envelope');
+        icon.setAttribute('aria-hidden', 'true');
+
+        // Append the icon and text node to the link element
+        mailtoLink.appendChild(icon);
+        mailtoLink.appendChild(textNode);
+
+        mailtoLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const subject = 'HAMK New BYOD feedback';
+            const body = `I have some feedback about the page titled: ${document.title} at the URL: ${window.location.href}`;
+            const mailtoURL = `mailto:deepak.curator@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoURL;
+        });
+        ellipsisContainer.appendChild(mailtoLink);
+    }
+});
+```
+
+### 4.11 Zip button to download files
 See the documentation about <a href='https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/?h=zip#creating-a-zip-file' target='_blank'>creating a .zip file</a>  
 
-### 4.11 Integration to videoplatform   
+### 4.12 Integration to videoplatform   
 See the discussion at <a href='https://github.com/squidfunk/mkdocs-material/discussions/3984' target='_blank'>discussions/3984</a>  
 
 ## 5. Fantasy
@@ -764,7 +805,6 @@ Example of page using this:
 The page does not allow ping or tracert  
 The picture rendered as <a href='https://squidfunk.github.io/mkdocs-material/assets/images/wall.png' target='_blank'>https://squidfunk.github.io/mkdocs-material/assets/images/wall.png</a>  
 but not found at <a href='https://github.com/squidfunk/mkdocs-material/tree/master/docs/assets/images' target='_blank'>https://github.com/squidfunk/mkdocs-material/tree/master/docs/assets/images</a> nor at the parent folder <a href='https://github.com/squidfunk/mkdocs-material' target='_blank'>https://github.com/squidfunk/mkdocs-material</a> 
-
 
 
 ### 7.6 More tools to use
