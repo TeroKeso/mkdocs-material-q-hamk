@@ -56,11 +56,12 @@ h1, h2, h3, h4, h5, h6, .md-ellipsis, .md-tabs__link {
 
 .md-search__icon.md-icon { /* magnifier search icon in the search box */
     color: #D7AFFF;
+    font-size: 12px;
 }
 
-input.md-search__input::placeholder{ /*placeholder in the search box*/
-    color: #D7AFFF;
+input.md-search__input::placeholder { /*placeholder in the search box*/
     font-size: 14px;
+    color: #D7AFFF;
 }
 
 .md-tabs { /* the horizontal bar just below the header */
@@ -111,5 +112,10 @@ input.md-search__input::placeholder{ /*placeholder in the search box*/
 .custom-email-link { /* Adjust the 'Feedback' text */
     font-size: 14px;
     vertical-align: middle;
+    color: #D7AFFF;
+}
+
+/* collectively set the color for the header content */
+.md-header__ellipsis .md-ellipsis, .md-icon, .md-search__icon.md-icon, .custom-email-link, .custom-email-link i, input.md-search__input::placeholder {
     color: #D7AFFF;
 }
