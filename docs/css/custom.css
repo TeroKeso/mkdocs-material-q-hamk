@@ -27,8 +27,18 @@
     --md-code-font: 'Roboto Mono', 'Courier';
 }
 
-h1, h2, h3, h4, h5, h6, .md-ellipsis, .md-tabs__link {
-    font-family: var(--font-family-serif)
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-serif);
+    font-weight: normal;
+}
+
+.md-ellipsis, .md-tabs__link {
+    font-family: var(--font-family-serif);
+    font-weight: normal;
+}
+
+.md-nav__title .md-nav__link .md-nav__item { /* not working */
+    font-weight: lighter;
 }
 
 /* HAMK branding colors */
@@ -40,10 +50,13 @@ h1, h2, h3, h4, h5, h6, .md-ellipsis, .md-tabs__link {
 .md-nav .md-nav__title { /* 2nd degree drawer for small screens AND the right side TOC  */
     background-color: #7300F0;
     color: white;
+    font-family: var(--font-family-serif);
+    font-weight: normal;
 }
 
 .md-header__ellipsis .md-ellipsis { /* header text */
     color: #D7AFFF;
+    font-weight: normal;
 }
 
 .md-header__ellipsis .md-ellipsis:hover { /* header text */
@@ -72,30 +85,19 @@ input.md-search__input::placeholder { /*placeholder in the search box*/
     color: white;
 }
 
-.md-ellipsis:hover { /* hovering over the left nav links, also affecting header text */
+.md-nav__link { /* nav and toc links */
+    font-size: 13px;
+}
+
+.md-ellipsis:hover { /* hovering over the nav and toc links, also affecting header text if not set separately */
     color: #7300F0;
 }
 
-/* font for the nav (left side nav)*/
-/* this is syntax correct, but color should be different for better visibility*/
-/*
-.md-nav--primary .md-nav__item--active>.md-nav__link {
-    color: #7300F0;
+[id^="__nav_"][id$="_label"] .md-ellipsis { /* HEAD of group doc */
+    color: var(--md-typeset-a-color); /* same color with other active links */
+    font-family: var(--font-family-serif);
+    text-transform: uppercase;
 }
-*/
-
-/* from documentation, but not switchable yet on dark and light modes 
-[data-md-color-scheme='HAMK'] {
-    --md-primary-fg-color:        #003755;
-    --md-primary-fg-color--light: #7300F0;
-    --md-primary-fg-color--dark:  #003755;
-}
-[data-md-color-scheme] {
-    --md-primary-fg-color:        #003755;
-    --md-primary-fg-color--light: #7300F0;
-    --md-primary-fg-color--dark:  #003755;
-}
-*/
 
 /* For the email feedback button, putting to the search div */
 .md-search {

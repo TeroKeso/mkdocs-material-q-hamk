@@ -1,0 +1,41 @@
+
+/* for the nav (left side nav)*/
+[id^="__nav_"][id$="_label"] .md-ellipsis  { /* top of nav (directory) */
+    background-color: #003755;
+    color: #D7AFFF;
+    font-weight: normal;
+}
+@media (prefers-color-scheme: dark) {
+    [id^="__nav_"][id$="_label"] .md-ellipsis  { /* top of nav (directory) */
+        --quang-color: #D7AFFF;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body.light-mode[id^="__nav_"][id$="_label"] .md-ellipsis  { /* top of nav (directory) */
+        --quang-color: #003755;
+    }
+}
+
+.md-nav__link.md-nav__link--active .md-ellipsis { /* index, and active nav (R) and toc (L) links*/
+    background-color: #7300F0;
+    color: white;
+}
+
+.md-nav--primary .md-nav__item--active>.md-nav__link {/* active nav item (left)*/
+    background-color: #D7AFFF;
+    color: white;
+}
+
+a.md-nav__link.md-nav__link--passed.md-nav__link--active {/* active toc item (right) */
+    background-color: #FF6400;
+    color: white;
+}
+
+.md-nav__link { /* experimenting */
+    font-weight: normal !important;
+}
+
+:root {
+    --md-typeset-a-color: red !important;
+}
