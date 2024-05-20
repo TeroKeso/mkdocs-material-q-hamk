@@ -8,11 +8,8 @@ title: Index
 ???+ note inline end
     Current <a href="https://hamk-business-information-technology.github.io/os/" target="_blank">HAMK BYOD guide</a> page.
 ### 1. Experimenting  <a href='./byod/1.WinUsers/'>BYOD with Mkdocs material</a>
-
 ### 2. The <a href='./learn/Documentation/#42-easy-to-use-code-copy-and-paste'>Documentation</a> page for this project
-
-### 3. Video integration
-
+### 3. <a href='http://127.0.0.1:8000/learn/Documentation/#412-integration-to-videoplatform' target='_blank'>Video integration</a> done  
 ### 4. VM integration
 
 ???+ info

@@ -175,7 +175,8 @@ Examples of inline highlight (inlinehilite):
     4. <a href='https://facelessuser.github.io/pymdown-extensions/extensions/highlight/#syntax-highlighting' target='_blank'>FacelessUser Syntax InlineHilite</a>  
     5. For bash, see the <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussions/6504</a>  
     6. <a href='https://learn.srlinux.dev/blog/2023/sr-linux-syntax-highlighting-with-pygments/' target='_blank'>SR Linux Syntax Highlighting with Pygments</a>  
-    7. Cusomization with <a href='https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/assets/stylesheets/main/_colors.scss'>MkDocs root css color variables</a>
+    7. Cusomization Pygments with <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/?h=embedd#custom-syntax-theme'>MkDocs Custom syntax theme</a>
+    
 
 ```yaml title="mkdocs.yml"
 markdown_extensions:
@@ -596,10 +597,10 @@ extra:
     3 <a href='https://www.hamk.fi/en/hamk-renewed-its-brand/' target='_blank'>hamk-renewed-its-brand</a>  
     4 <a href='https://hamk.mediaflowportal.com/folder/754905/' target='_blank'>hamk.mediaflowportal</a>  
 
-#### ✓ HAMK colors (for header and nav)
+#### ✓ HAMK colors (for header, nav, and toc)
 ???+ note "documentation"
-    <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/'>MkDocs-material Changing the colors</a>
-    <a href='https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/assets/stylesheets/main/_colors.scss'>MkDocs root css color variables</a>
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/' target='_blank'>Changing the colors</a> and 
+    <a href='https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/assets/stylesheets/main/_colors.scss' target='_blank'>MkDocs root css color variables</a>
 
 
 ```css title="HAMK colors"
@@ -611,7 +612,7 @@ HAMK light pink = HEX #D7AFFF = rgb(215, 175, 255)
 ####  ✓ HAMK logo (& favicon)
 
 ???+ note "documentation"
-    <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/'>MkDocs-material Changing the logo and icons</a>
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/'>Changing the logo and icons</a>
 
 HAMK logo (white on transparent) used as logo and favicon.  
 Other HAMK logo, <a href='https://www.hamk.fi/wp-content/themes/hamk/dist/graphic-background-full.svg?v=081d95ef6e7655f27b90'>black on transparent</a>:  
@@ -651,7 +652,7 @@ TT Rounds Neu Demi Bold <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fon
     font-style: normal;
 }
 
-@font-face {/* from the HAMK font .zip file */
+@font-face {/* from the HAMK font .zip file. The Condensed (Narrowed) is not used */
     font-family: 'TT Rounds Neue Condensed';
     src: url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
          url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
@@ -665,7 +666,6 @@ extra_css:
   - https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap
 ```
 
-
 Sample texts from the <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>HAMKin brandi page</a> to view and compare  
 
 **Hämeen ammattikorkeakoulu (HAMK) on oppimis- ja tutkimusyhteisö tekijöille, jotka haluavat muuttaa maailmaa.** Meitä on noin 10 000 biotalouden, hyvinvoinnin, koulutuksen, liiketoiminnan, muotoilun ja teknologian tulevaisuuden tekijää. Toimimme seitsemällä kampuksella, verkossa ja kansainvälisesti. Opiskelijoille, henkilöstölle ja yhteistyökumppaneillemme tarjoamme erinomaiset työkalut ja ympäristöt tehdä työtä ja hyödyllisiä tekoja yhdessä.  
@@ -675,7 +675,7 @@ Suomenkielistä logoversiota käytetään suomenkielisissä yhteyksissä ja engl
 ### ✓ 4.9 Dark mode as default
 
 ???+ note "documentation"
-    <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle'>MkDocs-material Color palette toggle</a>
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle'>Color palette toggle</a>
 
 To set dark mode as default:  
 put - scheme: slate as the 1st scheme in palette (when the user first visits our site, the media queries are evaluated in the order of their definition.)  
@@ -729,8 +729,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
 See the documentation about <a href='https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/?h=zip#creating-a-zip-file' target='_blank'>creating a .zip file</a>  
 
-### 4.12 Integration to videoplatform   
-See the discussion at <a href='https://github.com/squidfunk/mkdocs-material/discussions/3984' target='_blank'>discussions/3984</a>  
+### ✓ 4.12 Integration to videoplatform   
+???+ note "documentation"
+    See the discussion at <a href='https://github.com/squidfunk/mkdocs-material/discussions/3984' target='_blank'>discussions/3984</a>  
+
+```md title="In the .md file, attn to the src syntax ending 'preview' for googledrive"
+<div class='video-container'>
+  <iframe src='https://drive.google.com/file/d/[FILE_ID]/preview' allowfullscreen></iframe>
+</div>
+```
+
+```css title="css for the video frame"
+.video-container {
+    position: relative; /* allows the iframe element inside it to be positioned relative to this container. */
+    width: 100%; /* makes the container take up 100% of the width of its parent element */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0; /*  height set to 0 because padding is used to define the aspect ratio of the container */
+    overflow: hidden; /* ensures that the iframe content doesn't spill out of the container */
+    max-width: 100%; /* ensures the container doesn't grow larger than its parent element, maintaining responsive behavior. */
+    background: #000; /* placeholder color before the video loads */
+}
+.video-container iframe {
+    position: absolute; /* sets the position of the iframe to absolute, so it will be positioned relative 
+        to the nearest positioned ancestor (in this case, .video-container which is set to relative above) */
+    top: 0; /* positions the top edge of the iframe at the top of the container*/
+    left: 0; /* positions the left edge of the iframe at the left of the container */
+    width: 100%; /* makes the iframe take up 100% of the width of the container */
+    height: 100%; /* makes the iframe take up 100% of the height of the container. */
+    border: 0; /* removes any default border that might be applied to the iframe */
+}
+```
+Iframe in css div (The Working Solution, also responsive)  
+<div class='video-container'>
+  <iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen></iframe>
+</div>
+Iframe with width=100% height=auto  
+<iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen width=100% height='auto'></iframe>  
+Iframe style='width: 100%; height: 100%;'  
+<iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen style='width: 100%; height: 100%;'></iframe>
+
 
 ## 5. Fantasy
 ### 5.1 VM inside of browser
@@ -745,10 +782,26 @@ Custom CSS (custom.css)
 ### 6.2 Code block with ``` better supported than by indentation
 
 ### 6.3 Navigation bar (left side) and TOC (right side)
+
+???+ info "Documentation"
+    <a href='https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#table-of-contents' target='_blank'>#table-of-contents</a>. Examples:  
+    - <a href='https://squidfunk.github.io/mkdocs-material/contributing' target='_blank'>mkdocs-material community</a>  
+    - <a href='https://blog.pypi.org/' target='_blank'>pypi blog</a>  
+
 ???+ info
-    Standard mkdocs-material terms: nav (right side bar), toc (left side bar)
-For small site, use the following setting to integrate the toc to the left side.
+    Standard mkdocs-material terms: nav (right side bar), toc (left side bar).  
+    "Left panel for navigating between subpages, right panel for current page TOC."  
+    Hamburger nav bar = <a href='https://github.com/squidfunk/mkdocs-material/discussions/3210' target='_blank'>Hamburger left menu?</a>  
+    -->Using <a href='https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/' target='_blank'>Collapsible navigation</a> instead.  
+
 ```yaml
+theme:
+  features:
+    - navigation.expand
+```
+
+For small site, use the following setting to integrate the toc to the left side.
+```yaml title="mkdocs.yml"
 theme:
   features:
     - toc.integrate
@@ -766,24 +819,9 @@ hide:
 ...
 ```
 
-Hamburger nav bar
-<a href='https://github.com/squidfunk/mkdocs-material/discussions/3210' target='_blank'>Hamburger left menu?</a>  
--->Using <a href='https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/' target='_blank'>Collapsible navigation</a> instead.  
-```yaml
-theme:
-  features:
-    - navigation.expand
-```
-
-#### Left panel for navigating between subpages, right panel for current page TOC:  
-Documentation <a href='https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#table-of-contents' target='_blank'>#table-of-contents</a>. Examples:  
-- <a href='https://squidfunk.github.io/mkdocs-material/contributing' target='_blank'>mkdocs-material community</a>  
-- <a href='https://blog.pypi.org/' target='_blank'>pypi blog</a>  
-
 ### 6.4 Changing the color
 <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/' target='_blank'>Changing the color</a>  
 
-####
 ## 7. Curiosity and Ideas
 <a href='' target='_blank'></a>  
 
@@ -835,15 +873,20 @@ Just check the <a href='https://squidfunk.github.io/mkdocs-material/' target='_b
   > - <a href='https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonitions' target='_blank'>Admonitions</a> to use: <a href='https://squidfunk.github.io/mkdocs-material/reference/admonitions/#+type:warning' target='_blank'>Warning,</a> Abstract, Bug, Danger, Example, Info, Note, Question, Quote, Success, Tip.
 
 
+!!! warning "content always display"
+    Content always display  
+    Use "customized title" to give a title to the admonition  
+    Use !!! to start an admonition
 
-!!! Warning "Username and Password"
-    Use your own 'username' and 'password' in the code line 10.
+??? note "content hidden by default and need to click to the right to open"
+    Use ??? to start an admonition
 
-???+ note "Username and Password"
-    Use your own 'username' and 'password' in the code line 10.  
+???+ danger "content displayed by default and can click to the right to hide"
+    Use ???+ to start an admonition
+
 - <a href='https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-flowcharts' target='_blank'>Flowcharts</a> and many types of <a href='https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-sequence-diagrams' target='_blank'>diagrams</a>  
 - <a href='https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=permalink#+toc.permalink' target='_blank'>Permalink</a> (`permalink`) inserts an anchor link with the symbol ¶ at the end of each headline, directly link to a subpart of the document, for easy sharing.
-```yaml
+```yaml title="mkdocs.yml to use permalink"
 markdown_extensions:
   - toc:
       permalink: true
