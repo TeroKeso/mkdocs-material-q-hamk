@@ -41,7 +41,7 @@ The <a href='https://hamk-business-information-technology.github.io/os/' target=
 ## 4. Goals = be better than moodle
 ### ✓ 4.1 Search
 !!! info "documentation: Setting up site search"
-    <a href='https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/' target='_blank'>MkDocs-material Setting up site search</a>  
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/' target='_blank'>Setting up site search</a>  
 
 ```yaml
 theme:
@@ -80,7 +80,7 @@ docs/
 ```
 ### ✓ 4.2 Easy to use code copy and paste
 !!! info "documentation: Code copy button"
-    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button' target='_blank'>MkDocs-material Code copy button</a>  
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button' target='_blank'>Code copy button</a>  
 ```yaml
 theme:
   features:
@@ -96,12 +96,11 @@ Code block with ```: blank lines automatically added after each line when copied
 
 ### ✓ 4.3 Code line numbering
 !!! info "documentation: adding line number for the code blocks by ```"
-    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-line-numbers' target='_blank'>MkDocs-material Adding line numbers</a>  
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-line-numbers' target='_blank'>Adding line numbers</a>  
     This add line numbers to specific blocks with this only.
-
-```js title=""
-linenums="1" // (1)!
-```
+    ```js title=""
+    linenums="1" // (1)!
+    ```
 
 1. add this code after the 3 backtick (e.g. ``` linenums="1")
 
@@ -112,16 +111,15 @@ linenums="1" // (1)!
 ???+warning
     This option will add line numbers to all code blocks.
     To selectively add line numbers to a particular blocks, use the above method.
-
-```yaml title="mkdocs.yml" linenums="1"
-markdown_extensions:
-  - codehilite:
-      linenums: true # this is required for the code block by indentation only
-```
+    ```yaml title="mkdocs.yml" linenums="1"
+    markdown_extensions:
+      - codehilite:
+        linenums: true # this is required for the code block by indentation only
+    ```
 
 ### ✓ 4.4 Highlight entire row
 !!! info "documentation"
-    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-specific-lines-lines' target='_blank'>MkDocs-material Code highlighting</a>  
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-specific-lines-lines' target='_blank'>Code highlighting</a>  
 
 ```js title=""
 hl_lines="2-5 8" // (1)!
@@ -148,7 +146,7 @@ replace the following with your own 'username' and 'password'
 
 ### ✓ 4.5 In line highlight
 !!! info "documentation"
-    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-inline-code-blocks' target='_blank'>MkDocs-material Highlighting inline code blocks</a>  
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#highlighting-inline-code-blocks' target='_blank'>Highlighting inline code blocks</a>  
 
 ```yaml title="mkdocs.yml"
 markdown_extensions:
@@ -170,12 +168,12 @@ Examples of inline highlight (inlinehilite):
 
 !!! info "documentation"
     1. <a href='https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=syntax+hi#inlinehilite' target='_blank'>MkDocs-material Syntax Highlighting</a>  
-    2. details <a href='https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=#highlight' target='_blank'>MkDocs-material Python Markdown Extensions Highlight</a>  
+    2. details in MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/?h=#highlight' target='_blank'>Python Markdown Extensions Highlight</a>  
     3. A 'solution' <a href='https://github.com/squidfunk/mkdocs-material/issues/138'>work around for php</a>
     4. <a href='https://facelessuser.github.io/pymdown-extensions/extensions/highlight/#syntax-highlighting' target='_blank'>FacelessUser Syntax InlineHilite</a>  
     5. For bash, see the <a href='https://github.com/squidfunk/mkdocs-material/discussions/6504' target='_blank'>discussions/6504</a>  
     6. <a href='https://learn.srlinux.dev/blog/2023/sr-linux-syntax-highlighting-with-pygments/' target='_blank'>SR Linux Syntax Highlighting with Pygments</a>  
-    7. Cusomization Pygments with <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/?h=embedd#custom-syntax-theme'>MkDocs Custom syntax theme</a>
+    7. Cusomization Pygments with MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/?h=embedd#custom-syntax-theme'>Custom syntax theme</a>
     
 
 ```yaml title="mkdocs.yml"
@@ -381,8 +379,8 @@ ls $the_path
 Each line can host only one annotation.  
 
 !!! info "documentation"
-    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations' target='_blank'>MkDocs-material Code annotation Configuration</a>  
-    <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations' target='_blank'>MkDocs-material Code annotation Usage</a>  
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations' target='_blank'>Code annotation Configuration</a>  
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations' target='_blank'>Code annotation Usage</a>  
 
 #### bash annotate ✓
 ```bash linenums="1" hl_lines="3"
@@ -629,7 +627,7 @@ theme:
 #### ✓ HAMK fonts
 
 ???+ note "documentation"
-    <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/'>MkDocs-material Changing the fonts</a>
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/'>Changing the fonts</a>
 Customizing h elements (TT Rounds Neue) vs body (Inter) done.  
 
 CSS settings for font families (from the <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>HAMKin brandi page</a>):  
@@ -828,7 +826,7 @@ hide:
 ### Always test, Do not assume
 ### ✓ 7.1 Mobile friendliness lost with code line numbering (4 indents - codehilite: linenums: true, and css) [solved]
 #### No problem if code block generated by ```
-Original sites with code blocks (no line numbering) are mobile friendly <a href='https://squidfunk.github.io/mkdocs-material/reference/' target='_blank'>MkDocs-material References</a> or <a href='https://luonghuyquang.github.io/mkdocs-material-q-hamk/' target='_blank'>Initial experiment</a>  
+Original sites with code blocks (no line numbering) are mobile friendly: MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/reference/' target='_blank'>References</a> or <a href='https://luonghuyquang.github.io/mkdocs-material-q-hamk/' target='_blank'>Initial experiment</a>  
 ### ✓ 7.2 Nav and TOC see <a href='./#63-navigation-bar-left-side-and-toc-right-side'>Tech note 6.3</a>
 ???+ info
     Standard mkdocs-material terms: nav (right side bar), toc (left side bar).
@@ -850,7 +848,7 @@ Indexed by SEs such as Google
 ### 7.4 [deprioritized] Switch to 'system preference' beside the dual dark / light
 
 ???+ note "documentation"
-    - <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode' target='_blank'>MkDocs-material Automatic light / dark mode</a>
+    - MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode' target='_blank'>Automatic light / dark mode</a>
 
 Example of page using this:  
 - <a href='https://squidfunk.github.io/mkdocs-material/' target='_blank'>material for MkDocs</a>  
@@ -871,6 +869,7 @@ Just check the <a href='https://squidfunk.github.io/mkdocs-material/' target='_b
 - <a href='https://squidfunk.github.io/mkdocs-material/plugins/' target='_blank'>Plugins</a>  
 - <a href='https://squidfunk.github.io/mkdocs-material/reference/' target='_blank'>Reference</a>:  
   > - <a href='https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonitions' target='_blank'>Admonitions</a> to use: <a href='https://squidfunk.github.io/mkdocs-material/reference/admonitions/#+type:warning' target='_blank'>Warning,</a> Abstract, Bug, Danger, Example, Info, Note, Question, Quote, Success, Tip.
+  > - Code can be inside an admonition, see examples in <a href='./#43-code-line-numbering'>4.3 above</a>
 
 
 !!! warning "content always display"
