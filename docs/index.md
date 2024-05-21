@@ -1,7 +1,7 @@
 ---
 title: Index
 ---
-# Demo site
+# HAMK's BYOD n BeYOnD
 
 === "BYOD with MkDocs"
     ???+ note inline end "the current ('old') page"
