@@ -287,27 +287,28 @@ document.getElementById("demo").innerHTML = "Hello JavaScript";
 ```
 
 ##### php (suboptimal)
-Currently, php highlighted but required the opening PHP tag <?php
+Currently, php highlighted but required `#!php <?`  
 'Solution': <a href='https://github.com/squidfunk/mkdocs-material/issues/138' target='_blank'>work around for php</a>  
 
 ```php linenums="1"
 // this is php
 echo "Hello, world!";
-/* not highlighted until leaded by the opening PHP tag, even commented, as shown right below */
 function myMessage() {
   echo "Hello world!";
 }
 myMessage();
 
-// until <?php
+// the same code below
+// until <? //(1)!
 echo "Hello, world!";
-// this is php
 function myMessage() {
   echo "Hello world!";
 }
 myMessage();
 
 ```
+
+1. The code in lines `#!py 2-6` are not highlighted. The same code, lines `#!py 10-14`, are higlighted thanks to the [short] opening PHP tag `#!php <?`, even commented as in line `#!py 9`. Missing the tag also inactivates the annotation.
 
 ##### powershell ✓
 ```powershell linenums="1"
@@ -790,7 +791,8 @@ This feature is solely intended to create reproductions for bug reports. When th
 
 ???+ ".zip file for bug reporting"
     See the documentation about <a href='https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/?h=zip#creating-a-zip-file' target='_blank'>creating a .zip file</a> to creating a reproduction for bug reporting.
-```yaml "mkdocs.yml"
+
+```yaml title="mkdocs.yml"
 plugins:
   - info
 ```

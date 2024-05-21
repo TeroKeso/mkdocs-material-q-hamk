@@ -94,7 +94,9 @@ extra_javascript:
   - js/custom.js
   
 
-#plugins:
+plugins:
+  - offline:
+      enabled: !ENV [OFFLINE, false] # if true, the rendered url will differ with .html ending
   #- info
   #- search
 
