@@ -9,7 +9,7 @@ title: Index
     Current <a href="https://hamk-business-information-technology.github.io/os/" target="_blank">HAMK BYOD guide</a> page.
 ### 1. Experimenting  <a href='./byod/1.WinUsers/'>BYOD with Mkdocs material</a>
 ### 2. The <a href='./learn/Documentation/#4-goals-be-better-than-moodle'>Documentation</a> page for this project
-  > #### <a href='http://127.0.0.1:8000/learn/Documentation/#412-integration-to-videoplatform' target='_blank'>Video integration</a> done  
+  > #### <a href='./learn/Documentation/#412-integration-to-videoplatform' target='_blank'>Video integration</a> done  
 ### 3. VM integration
 ???+ info
     This page is built initially following <a href="https://www.youtube.com/watch?v=Q-YA_dA8C20" target="_blank">an instruction</a> on YouTube.

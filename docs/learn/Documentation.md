@@ -757,13 +757,13 @@ See the documentation about <a href='https://squidfunk.github.io/mkdocs-material
     border: 0; /* removes any default border that might be applied to the iframe */
 }
 ```
-Iframe in css div (The Working Solution, also responsive)  
+The Working Solution, responsive: `iframe in div with css`:  
 <div class='video-container'>
   <iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen></iframe>
 </div>
-Iframe with width=100% height=auto  
+[Do not use] iframe with `width=100% height=auto`:  
 <iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen width=100% height='auto'></iframe>  
-Iframe style='width: 100%; height: 100%;'  
+[Do not use] iframe `style='width: 100%; height: 100%;'` :  
 <iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen style='width: 100%; height: 100%;'></iframe>
 
 
@@ -872,8 +872,8 @@ Just check the <a href='https://squidfunk.github.io/mkdocs-material/' target='_b
   > - Code can be inside an admonition, see examples in <a href='./#43-code-line-numbering'>4.3 above</a>
 
 
-!!! warning "content always display"
-    Content always display  
+!!! warning "content always displayed"
+    Content always displayed  
     Use "customized title" to give a title to the admonition  
     Use !!! to start an admonition
 
