@@ -101,8 +101,8 @@ Code block with ```: blank lines automatically added after each line when copied
     ```js title=""
     linenums="1" // (1)!
     ```
-
-1. add this code after the 3 backtick (e.g. ``` linenums="1")
+    
+    1. add this code after the 3 backtick (e.g. ``` linenums="1")
 
 !!! info "adding line number for the code blocks by indentation"
     Method for adding line numbers different for the case of code block by indentation (4 indents in each line).  
@@ -677,7 +677,7 @@ Suomenkielistä logoversiota käytetään suomenkielisissä yhteyksissä ja engl
 
 To set dark mode as default:  
 put - scheme: slate as the 1st scheme in palette (when the user first visits our site, the media queries are evaluated in the order of their definition.)  
-See also <a href='./#deprioritized-74-switch-to-system-preference-beside-the-dual-dark-light'> 7.4 Switch to 'system preference' beside the dual dark / light</a>
+See also <a href='./#74-deprioritized-switch-to-system-preference-beside-the-dual-dark-light'> 7.4 Switch to 'system preference' beside the dual dark / light</a>
 
 ### ✓ 4.10 Send email feedback button
 Current Feedback button in the old BYOD site:
@@ -720,22 +720,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-### 4.11 [out of scope] Zip button to download files
-
-???+ info ".zip file"
-    This feature is solely intended to create reproductions for bug reports. When the built-in info plugin is enabled, MkDocs will add all relevant files to a .zip, print a summary to the terminal and exit.
-
-See the documentation about <a href='https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/?h=zip#creating-a-zip-file' target='_blank'>creating a .zip file</a>  
-
-### ✓ 4.12 Integration to videoplatform   
+### ✓ 4.11 Integration to videoplatform   
 ???+ note "documentation"
     See the discussion at <a href='https://github.com/squidfunk/mkdocs-material/discussions/3984' target='_blank'>discussions/3984</a>  
-
-```md title="In the .md file, attn to the src syntax ending 'preview' for googledrive"
-<div class='video-container'>
+##### GOOGLE DRIVE
+```html title="In the .md file, attn to the src syntax ending 'preview' for googledrive"
+<div class='video-container'> <!--(1)!-->
   <iframe src='https://drive.google.com/file/d/[FILE_ID]/preview' allowfullscreen></iframe>
 </div>
 ```
+
+1. /file/d/[FILE_ID]/preview
 
 ```css title="css for the video frame"
 .video-container {
@@ -759,17 +754,47 @@ See the documentation about <a href='https://squidfunk.github.io/mkdocs-material
 ```
 The Working Solution, responsive: `iframe in div with css`:  
 <div class='video-container'>
-  <iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen></iframe>
+  <iframe src='https://drive.google.com/file/d/1uGRddSym1KbVSJit2DNoMiAGE4uakcY7/preview' allowfullscreen></iframe>
 </div>
 [Do not use] iframe with `width=100% height=auto`:  
-<iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen width=100% height='auto'></iframe>  
+<iframe src='https://drive.google.com/file/d/1uGRddSym1KbVSJit2DNoMiAGE4uakcY7/preview' allowfullscreen width=100% height='auto'></iframe>  
 [Do not use] iframe `style='width: 100%; height: 100%;'` :  
-<iframe src='https://drive.google.com/file/d/1t7NLrDi2H3eI_9LIrPaXICLn0FTVyIQJ/preview' allowfullscreen style='width: 100%; height: 100%;'></iframe>
+<iframe src='https://drive.google.com/file/d/1uGRddSym1KbVSJit2DNoMiAGE4uakcY7/preview' allowfullscreen style='width: 100%; height: 100%;'></iframe>
 
+##### YOUTUBE
+
+```html title="https://www.youtube.com/EMBED/videoID"
+The Working Solution, responsive: `iframe in div with css`:  
+<div class='video-container'> <!--(1)!-->
+  <iframe src='https://www.youtube.com/embed/CF6ZGbz59gE' allowfullscreen></iframe>
+</div>
+```
+
+1. add /embed/ to the code
+
+The Working Solution, responsive: `iframe in div with css`:  
+<div class='video-container'>
+  <iframe src='https://www.youtube.com/embed/smbX1wHhGjs' allowfullscreen></iframe>
+</div>
 
 ## 5. Fantasy
-### 5.1 VM inside of browser
-### 5.2 Integration on VM
+### 5.1 .zip button to download file
+#### 5.1.1 Offline plugin: to distribute our documentation
+Our documentation can be distributed as a smaller `.zip` download
+???+ "documentation"
+    MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/plugins/offline/' target='_blank'>Offline plugin</a>  
+
+#### 5.1.2 For bug reporting:
+
+This feature is solely intended to create reproductions for bug reports. When the built-in info plugin is enabled, MkDocs will add all relevant files to a `.zip`, print a summary to the terminal and exit.
+
+???+ ".zip file for bug reporting"
+    See the documentation about <a href='https://squidfunk.github.io/mkdocs-material/guides/creating-a-reproduction/?h=zip#creating-a-zip-file' target='_blank'>creating a .zip file</a> to creating a reproduction for bug reporting.
+```yaml "mkdocs.yml"
+plugins:
+  - info
+```
+### 5.2 VM integration
 
 ## 6. Tech notes
 ### 6.1 CSS: 

@@ -1,4 +1,4 @@
-site_name: MkDocs for HAMK BYOD and beyond
+site_name: MkDocs for HAMK BYOD and BeYOnD
 theme:
   name: material
   logo: assets/logo_light_pink.png
@@ -69,16 +69,18 @@ markdown_extensions:
       css_class: highlight
       pygments_style: friendly
   - pymdownx.highlight:
-#      anchor_linenums: true
-#      line_spans: __span
-#      use_pygments: true
-#      pygments_lang_class: true
-      auto_title: true
+      anchor_linenums: true # I did not see a difference with or w/o this (Q)
+      line_spans: __span # I did not see a difference with or w/o this (Q)
+      use_pygments: true # I did not see a difference with or w/o this (Q)
+      pygments_lang_class: true # I did not see a difference with or w/o this (Q)
+      auto_title: true # I did not see a difference with or w/o this (Q)
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
       title: On this HAMK page
