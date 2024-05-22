@@ -1,3 +1,36 @@
+/* add the TT Rounds Neue Font ('Trial' - not DemiBold) */
+@font-face {
+    font-family: 'TT Rounds Neue';
+    src: url('../assets/TT_Rounds_Neue_Trial_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Rounds Neue';
+    src: url('../assets/TT Rounds Neue Trial Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Rounds Neue';
+    src: url('../assets/TT_Rounds_Neue_Trial_Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Rounds Neue';
+    src: url('../assets/TT_Rounds_Neue_Trial_Bold_Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+.md-ellipsis {
+    font-family: 'TT Rounds Neue';
+}
+
 /* HAMK branding fonts */
 @font-face {/* from the HAMK font .zip file */
     font-family: 'TT Rounds Neue';

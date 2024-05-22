@@ -51,9 +51,9 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-# the below was not used in this project
-plugins:
-  - search
+# the below was used / not used in this project
+plugins: # if plugins off, search still works with the feature settings above
+  - search # must be on if plugins on
 ```
 
 ### Documentation for <a href='https://squidfunk.github.io/mkdocs-material/reference/code-blocks/' target='_blank'> code blocks</a>
@@ -629,22 +629,22 @@ theme:
 
 ???+ note "documentation"
     MkDocs-material <a href='https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/'>Changing the fonts</a>
-Customizing h elements (TT Rounds Neue) vs body (Inter) done.  
+Customizing h elements (TT Rounds Neue DemiBold) vs body (Inter) done.  
 
 CSS settings for font families (from the <a href='https://www.hamk.fi/tietoa-meista/hamkin-brandi/' target='_blank'>HAMKin brandi page</a>):  
 ![HAMK font families](./assets/HAMK.font_families.jfif)  
 
-TT Rounds Neu Demi Bold <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fonts/ttroundsneue_demibold_macroman/tt_rounds_neue_demibold-demo.html' target='_blank'>Demo</a>
-???+ info "HAMK documentation for TT Rounds Neue"
-    CSS setting as guided in the HAMK font .zip file <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fonts/ttroundsneue_demibold_macroman/stylesheet.css' target='_blank'>tt_rounds_neue_demibold</a> and <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fonts/ttroundsneuecondensed_demibold_macroman/stylesheet.css' target='_blank'>tt_rounds_neue_condensed_demibold</a>
+TT Rounds Neu Demibold <a href='../assets/HAMK_Fonts/TT Rounds Neue DemiBold/OTF/Web Fonts/ttroundsneue_demibold_macroman/tt_rounds_neue_demibold-demo.html' target='_blank'>Demo</a>
+???+ info "HAMK documentation for TT Rounds Neue DemiBold"
+    CSS setting as guided in the HAMK font .zip file <a href='../assets/HAMK_Fonts/TT Rounds Neue DemiBold/OTF/Web Fonts/ttroundsneue_demibold_macroman/stylesheet.css' target='_blank'>tt_rounds_neue_demibold</a> and <a href='../assets/HAMK_Fonts/TT Rounds Neue DemiBold/OTF/Web Fonts/ttroundsneuecondensed_demibold_macroman/stylesheet.css' target='_blank'>tt_rounds_neue_condensed_demibold</a>
 
-```css title="TT Rounds Neue, actual settings of this site"
+```css title="TT Rounds Neue DemiBold, actual settings of this site"
 :root { /* from the hamkin-brandi page, together with guidance in the .pptx file */
     --font-family-sans: 'Inter', Helvetica, Arial, sans-serif; 
-    --font-family-serif: 'TT Rounds Neue', 'Arial Rounded MT', serif; 
+    --font-family-serif: 'TT Rounds Neue DemiBold', 'Arial Rounded MT', serif; 
 }
 @font-face {/* adapted from the HAMK font .zip file */
-    font-family: 'TT Rounds Neue';
+    font-family: 'TT Rounds Neue DemiBold';
     src: url('../assets/tt_rounds_neue_demibold-webfont.woff2') format('woff2'),
          url('../assets/tt_rounds_neue_demibold-webfont.woff') format('woff');
     font-weight: normal;
@@ -652,7 +652,7 @@ TT Rounds Neu Demi Bold <a href='../assets/HAMK_Fonts/TT Rounds Neue/OTF/Web Fon
 }
 
 @font-face {/* from the HAMK font .zip file. The Condensed (Narrowed) is not used */
-    font-family: 'TT Rounds Neue Condensed';
+    font-family: 'TT Rounds Neue Condensed DemiBold';
     src: url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
          url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
     font-weight: normal;

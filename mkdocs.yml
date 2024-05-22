@@ -12,7 +12,7 @@ theme:
 #    - navigation.expand # needed for larger webservers
 #    - navigation.path # needed for larger webservers
     - navigation.top
-    - search
+    - search # as part of feature, works when plugins off. If plugins on: search must be on in plugins to be enabled.
     - search.sidebar
     - search.suggest
     - search.highlight
@@ -94,11 +94,11 @@ extra_javascript:
   - js/custom.js
   
 
-plugins:
-  - offline:
-      enabled: !ENV [OFFLINE, false] # if true, the rendered url will differ with .html ending
-  #- info
-  #- search
+# plugins:
+#  - offline:
+#      enabled: !ENV [OFFLINE, false] # if true, the rendered url will differ with .html ending
+#  - info # this is to report bug to mkdocs-material only
+#  - search # must be on if plugins on
 
 copyright:
   Copyright &copy; 2024 <a href="https://github.com/luonghuyquang" target="blank" >Luong Huy Quang</a>

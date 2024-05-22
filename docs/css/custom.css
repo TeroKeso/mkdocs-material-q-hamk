@@ -1,6 +1,6 @@
 /* HAMK branding fonts */
 @font-face {/* from the HAMK font .zip file */
-    font-family: 'TT Rounds Neue';
+    font-family: 'TT Rounds Neue DemiBold';
     src: url('../assets/tt_rounds_neue_demibold-webfont.woff2') format('woff2'),
          url('../assets/tt_rounds_neue_demibold-webfont.woff') format('woff');
     font-weight: normal;
@@ -8,7 +8,7 @@
 }
 
 @font-face {/* from the HAMK font .zip file */
-    font-family: 'TT Rounds Neue Condensed';
+    font-family: 'TT Rounds Neue Condensed DemiBold';
     src: url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff2') format('woff2'),
          url('../assets/tt_rounds_neue_condensed_demibold-webfont.woff') format('woff');
     font-weight: normal;
@@ -17,7 +17,7 @@
 
 :root {
     --font-family-sans: 'Inter', Helvetica, Arial, sans-serif; /* from the hamkin-brandi page */
-    --font-family-serif: 'TT Rounds Neue', 'Arial Rounded MT', serif; /* from the hamkin-brandi page */
+    --font-family-serif: 'TT Rounds Neue DemiBold', 'Arial Rounded MT', serif; /* from the hamkin-brandi page */
 /* currently not works 
     --md-primary-fg-color:        #003755;
     --md-primary-fg-color--light: #7300F0; 
@@ -83,10 +83,6 @@ input.md-search__input::placeholder { /*placeholder in the search box*/
 
 .md-tabs__item .md-tabs__link { /*nav in the horizontal bar just below the header*/
     color: white;
-}
-
-.md-nav__link { /* nav and toc links */
-    font-size: 13px;
 }
 
 .md-ellipsis:hover { /* hovering over the nav and toc links, also affecting header text if not set separately */
